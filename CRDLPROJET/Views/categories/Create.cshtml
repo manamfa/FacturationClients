@@ -6,14 +6,11 @@
 }
 @Html.Raw(TempData["msg"])
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main" style="background-color:aquamarine">
-     <h2 style="text-align:center">Remplissez ces champs</h2>
-    
+     <h2 style="text-align:center">Remplissez ces champs</h2> 
     <div class="col-lg-12" style="background-color:aquamarine">
         <div class="panel panel-default" style="background-color:aquamarine">
             <div class="panel-body" style="background-color:aquamarine">
                 <div class="col-md-6" style="background-color:aquamarine">
-
-
                     @using (Html.BeginForm())
                     {
                         @Html.AntiForgeryToken()
@@ -36,15 +33,12 @@
                                     @Html.ValidationMessageFor(model => model.dateentree, "", new { @class = "text-danger" })
                                 </div>
                             </div>
-
                             <div class="col-md-3">
-
                                 <input type="submit" value="Ajouter" class="btn btn-primary" />
 
                             </div>
                         </div>
                     }
-
                 <div class="col-md-3">
                     &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
                     &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
