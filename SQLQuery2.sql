@@ -1,0 +1,1 @@
+﻿select sum(Total) from historiquefacturation 

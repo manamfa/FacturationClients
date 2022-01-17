@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="facturationclientBOUModelStoreContainer" CdmEntityContainer="facturationclientBOUEntities4">
+    <EntitySetMapping Name="categories">
+      <EntityTypeMapping TypeName="facturationclientBOUModel.categorie">
+        <MappingFragment StoreEntitySet="categorie">
+          <ScalarProperty Name="categorieID" ColumnName="categorieID" />
+          <ScalarProperty Name="nomcategorie" ColumnName="nomcategorie" />
+          <ScalarProperty Name="dateentree" ColumnName="dateentree" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clients">
+      <EntityTypeMapping TypeName="facturationclientBOUModel.client">
+        <MappingFragment StoreEntitySet="client">
+          <ScalarProperty Name="clientID" ColumnName="clientID" />
+          <ScalarProperty Name="nomclient" ColumnName="nomclient" />
+          <ScalarProperty Name="prenomclient" ColumnName="prenomclient" />
+          <ScalarProperty Name="numtel" ColumnName="numtel" />
+          <ScalarProperty Name="adresse" ColumnName="adresse" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="facturations">
+      <EntityTypeMapping TypeName="facturationclientBOUModel.facturation">
+        <MappingFragment StoreEntitySet="facturation">
+          <ScalarProperty Name="facturationID" ColumnName="facturationID" />
+          <ScalarProperty Name="clientID" ColumnName="clientID" />
+          <ScalarProperty Name="datefacturation" ColumnName="datefacturation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fournisseurs">
+      <EntityTypeMapping TypeName="facturationclientBOUModel.fournisseur">
+        <MappingFragment StoreEntitySet="fournisseur">
+          <ScalarProperty Name="fournisseurID" ColumnName="fournisseurID" />
+          <ScalarProperty Name="nomfournisseur" ColumnName="nomfournisseur" />
+          <ScalarProperty Name="prenomfournisseur" ColumnName="prenomfournisseur" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+          <ScalarProperty Name="adresse" ColumnName="adresse" />
+          <ScalarProperty Name="datent" ColumnName="datent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="historiquefacturations">
+      <EntityTypeMapping TypeName="facturationclientBOUModel.historiquefacturation">
+        <MappingFragment StoreEntitySet="historiquefacturation">
+          <ScalarProperty Name="historiquefacturationID" ColumnName="historiquefacturationID" />
+          <ScalarProperty Name="produitID" ColumnName="produitID" />
+          <ScalarProperty Name="clientID" ColumnName="clientID" />
+          <ScalarProperty Name="facturationID" ColumnName="facturationID" />
+          <ScalarProperty Name="prixunitaire" ColumnName="prixunitaire" />
+          <ScalarProperty Name="Quantite" ColumnName="Quantite" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="datehistofacturation" ColumnName="datehistofacturation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="historiqueprixes">
+      <EntityTypeMapping TypeName="facturationclientBOUModel.historiqueprix">
+        <MappingFragment StoreEntitySet="historiqueprix">
+          <ScalarProperty Name="historiqueprixID" ColumnName="historiqueprixID" />
+          <ScalarProperty Name="produitID" ColumnName="produitID" />
+          <ScalarProperty Name="prixdeventeunitaire" ColumnName="prixdeventeunitaire" />
+          <ScalarProperty Name="datemodification" ColumnName="datemodification" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payements">
+      <EntityTypeMapping TypeName="facturationclientBOUModel.Payement">
+        <MappingFragment StoreEntitySet="Payement">
+          <ScalarProperty Name="IDpayement" ColumnName="IDpayement" />
+          <ScalarProperty Name="montant_total" ColumnName="montant_total" />
+          <ScalarProperty Name="montant_paye" ColumnName="montant_paye" />
+          <ScalarProperty Name="montant_restant" ColumnName="montant_restant" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="produits">
+      <EntityTypeMapping TypeName="facturationclientBOUModel.produit">
+        <MappingFragment StoreEntitySet="produit">
+          <ScalarProperty Name="produitID" ColumnName="produitID" />
+          <ScalarProperty Name="categorieID" ColumnName="categorieID" />
+          <ScalarProperty Name="fournisseurID" ColumnName="fournisseurID" />
+          <ScalarProperty Name="nomproduit" ColumnName="nomproduit" />
+          <ScalarProperty Name="prixdeventeunitaire" ColumnName="prixdeventeunitaire" />
+          <ScalarProperty Name="Quantite" ColumnName="Quantite" />
+          <ScalarProperty Name="prixunitaireachat" ColumnName="prixunitaireachat" />
+          <ScalarProperty Name="dateentree" ColumnName="dateentree" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="profils">
+      <EntityTypeMapping TypeName="facturationclientBOUModel.profil">
+        <MappingFragment StoreEntitySet="profil">
+          <ScalarProperty Name="profileID" ColumnName="profileID" />
+          <ScalarProperty Name="profilename" ColumnName="profilename" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tableachats">
+      <EntityTypeMapping TypeName="facturationclientBOUModel.tableachat">
+        <MappingFragment StoreEntitySet="tableachat">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="clientID" ColumnName="clientID" />
+          <ScalarProperty Name="produitID" ColumnName="produitID" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Quantite" ColumnName="Quantite" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="facturationclientBOUModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="profileID" ColumnName="profileID" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="userpassword" ColumnName="userpassword" />
+          <ScalarProperty Name="useremail" ColumnName="useremail" />
+          <ScalarProperty Name="dateinsertion" ColumnName="dateinsertion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

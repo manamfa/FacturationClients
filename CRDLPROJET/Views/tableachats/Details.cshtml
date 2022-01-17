@@ -1,0 +1,51 @@
+﻿@model CRDLPROJET.Models.tableachat
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Layouts/_Default.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tableachat</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantite)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Total)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Total)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.client.nomclient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.client.nomclient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.produit.nomproduit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.produit.nomproduit)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="facturationclientBOUModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="categorie">
+    <Key>
+      <PropertyRef Name="categorieID" />
+    </Key>
+    <Property Name="categorieID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nomcategorie" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dateentree" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="produits" Relationship="Self.FK__produit__categor__36B12243" FromRole="categorie" ToRole="produit" />
+  </EntityType>
+  <EntityType Name="client">
+    <Key>
+      <PropertyRef Name="clientID" />
+    </Key>
+    <Property Name="clientID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nomclient" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="prenomclient" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="numtel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="adresse" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="facturations" Relationship="Self.FK__facturati__clien__1CF15040" FromRole="client" ToRole="facturation" />
+    <NavigationProperty Name="historiquefacturations" Relationship="Self.FK__historiqu__clien__3E52440B" FromRole="client" ToRole="historiquefacturation" />
+    <NavigationProperty Name="historiquefacturations1" Relationship="Self.FK__historiqu__clien__47DBAE45" FromRole="client" ToRole="historiquefacturation" />
+    <NavigationProperty Name="historiquefacturations2" Relationship="Self.FK__historiqu__clien__4AB81AF0" FromRole="client" ToRole="historiquefacturation" />
+    <NavigationProperty Name="historiquefacturations3" Relationship="Self.FK__historiqu__clien__4E88ABD4" FromRole="client" ToRole="historiquefacturation" />
+    <NavigationProperty Name="tableachats" Relationship="Self.FK__tableacha__clien__4222D4EF" FromRole="client" ToRole="tableachat" />
+  </EntityType>
+  <EntityType Name="facturation">
+    <Key>
+      <PropertyRef Name="facturationID" />
+    </Key>
+    <Property Name="facturationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="clientID" Type="Int32" />
+    <Property Name="datefacturation" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="client" Relationship="Self.FK__facturati__clien__1CF15040" FromRole="facturation" ToRole="client" />
+    <NavigationProperty Name="historiquefacturations" Relationship="Self.FK__historiqu__factu__3F466844" FromRole="facturation" ToRole="historiquefacturation" />
+    <NavigationProperty Name="historiquefacturations1" Relationship="Self.FK__historiqu__factu__48CFD27E" FromRole="facturation" ToRole="historiquefacturation" />
+    <NavigationProperty Name="historiquefacturations2" Relationship="Self.FK__historiqu__factu__4BAC3F29" FromRole="facturation" ToRole="historiquefacturation" />
+    <NavigationProperty Name="historiquefacturations3" Relationship="Self.FK__historiqu__factu__4F7CD00D" FromRole="facturation" ToRole="historiquefacturation" />
+  </EntityType>
+  <EntityType Name="fournisseur">
+    <Key>
+      <PropertyRef Name="fournisseurID" />
+    </Key>
+    <Property Name="fournisseurID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nomfournisseur" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="prenomfournisseur" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="tel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="adresse" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="datent" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="produits" Relationship="Self.FK__produit__fournis__37A5467C" FromRole="fournisseur" ToRole="produit" />
+  </EntityType>
+  <EntityType Name="historiquefacturation">
+    <Key>
+      <PropertyRef Name="historiquefacturationID" />
+    </Key>
+    <Property Name="historiquefacturationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="produitID" Type="Int32" />
+    <Property Name="clientID" Type="Int32" />
+    <Property Name="facturationID" Type="Int32" />
+    <Property Name="prixunitaire" Type="Int32" />
+    <Property Name="Quantite" Type="Int32" />
+    <Property Name="Total" Type="Int32" />
+    <Property Name="datehistofacturation" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="client" Relationship="Self.FK__historiqu__clien__3E52440B" FromRole="historiquefacturation" ToRole="client" />
+    <NavigationProperty Name="client1" Relationship="Self.FK__historiqu__clien__47DBAE45" FromRole="historiquefacturation" ToRole="client" />
+    <NavigationProperty Name="client2" Relationship="Self.FK__historiqu__clien__4AB81AF0" FromRole="historiquefacturation" ToRole="client" />
+    <NavigationProperty Name="client3" Relationship="Self.FK__historiqu__clien__4E88ABD4" FromRole="historiquefacturation" ToRole="client" />
+    <NavigationProperty Name="facturation" Relationship="Self.FK__historiqu__factu__3F466844" FromRole="historiquefacturation" ToRole="facturation" />
+    <NavigationProperty Name="facturation1" Relationship="Self.FK__historiqu__factu__48CFD27E" FromRole="historiquefacturation" ToRole="facturation" />
+    <NavigationProperty Name="facturation2" Relationship="Self.FK__historiqu__factu__4BAC3F29" FromRole="historiquefacturation" ToRole="facturation" />
+    <NavigationProperty Name="facturation3" Relationship="Self.FK__historiqu__factu__4F7CD00D" FromRole="historiquefacturation" ToRole="facturation" />
+    <NavigationProperty Name="produit" Relationship="Self.FK__historiqu__produ__3D5E1FD2" FromRole="historiquefacturation" ToRole="produit" />
+    <NavigationProperty Name="produit1" Relationship="Self.FK__historiqu__produ__49C3F6B7" FromRole="historiquefacturation" ToRole="produit" />
+    <NavigationProperty Name="produit2" Relationship="Self.FK__historiqu__produ__4CA06362" FromRole="historiquefacturation" ToRole="produit" />
+    <NavigationProperty Name="produit3" Relationship="Self.FK__historiqu__produ__5070F446" FromRole="historiquefacturation" ToRole="produit" />
+  </EntityType>
+  <EntityType Name="historiqueprix">
+    <Key>
+      <PropertyRef Name="historiqueprixID" />
+    </Key>
+    <Property Name="historiqueprixID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="produitID" Type="Int32" />
+    <Property Name="prixdeventeunitaire" Type="Int32" />
+    <Property Name="datemodification" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="produit" Relationship="Self.FK__historiqu__produ__3A81B327" FromRole="historiqueprix" ToRole="produit" />
+  </EntityType>
+  <EntityType Name="Payement">
+    <Key>
+      <PropertyRef Name="IDpayement" />
+    </Key>
+    <Property Name="IDpayement" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="montant_total" Type="Int32" />
+    <Property Name="montant_paye" Type="Int32" />
+    <Property Name="montant_restant" Type="Int32" />
+  </EntityType>
+  <EntityType Name="produit">
+    <Key>
+      <PropertyRef Name="produitID" />
+    </Key>
+    <Property Name="produitID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="categorieID" Type="Int32" />
+    <Property Name="fournisseurID" Type="Int32" />
+    <Property Name="nomproduit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="prixdeventeunitaire" Type="Int32" />
+    <Property Name="Quantite" Type="Int32" />
+    <Property Name="prixunitaireachat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dateentree" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="categorie" Relationship="Self.FK__produit__categor__36B12243" FromRole="produit" ToRole="categorie" />
+    <NavigationProperty Name="fournisseur" Relationship="Self.FK__produit__fournis__37A5467C" FromRole="produit" ToRole="fournisseur" />
+    <NavigationProperty Name="historiquefacturations" Relationship="Self.FK__historiqu__produ__3D5E1FD2" FromRole="produit" ToRole="historiquefacturation" />
+    <NavigationProperty Name="historiquefacturations1" Relationship="Self.FK__historiqu__produ__49C3F6B7" FromRole="produit" ToRole="historiquefacturation" />
+    <NavigationProperty Name="historiquefacturations2" Relationship="Self.FK__historiqu__produ__4CA06362" FromRole="produit" ToRole="historiquefacturation" />
+    <NavigationProperty Name="historiquefacturations3" Relationship="Self.FK__historiqu__produ__5070F446" FromRole="produit" ToRole="historiquefacturation" />
+    <NavigationProperty Name="historiqueprixes" Relationship="Self.FK__historiqu__produ__3A81B327" FromRole="produit" ToRole="historiqueprix" />
+    <NavigationProperty Name="tableachats" Relationship="Self.FK__tableacha__produ__4316F928" FromRole="produit" ToRole="tableachat" />
+  </EntityType>
+  <EntityType Name="profil">
+    <Key>
+      <PropertyRef Name="profileID" />
+    </Key>
+    <Property Name="profileID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="profilename" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="users" Relationship="Self.FK__users__profileID__29572725" FromRole="profil" ToRole="users" />
+  </EntityType>
+  <EntityType Name="tableachat">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="clientID" Type="Int32" />
+    <Property Name="produitID" Type="Int32" />
+    <Property Name="Total" Type="Int32" />
+    <Property Name="Quantite" Type="Int32" />
+    <NavigationProperty Name="client" Relationship="Self.FK__tableacha__clien__4222D4EF" FromRole="tableachat" ToRole="client" />
+    <NavigationProperty Name="produit" Relationship="Self.FK__tableacha__produ__4316F928" FromRole="tableachat" ToRole="produit" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="profileID" Type="Int32" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="userpassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="useremail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dateinsertion" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="profil" Relationship="Self.FK__users__profileID__29572725" FromRole="users" ToRole="profil" />
+  </EntityType>
+  <Association Name="FK__produit__categor__36B12243">
+    <End Role="categorie" Type="Self.categorie" Multiplicity="0..1" />
+    <End Role="produit" Type="Self.produit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categorie">
+        <PropertyRef Name="categorieID" />
+      </Principal>
+      <Dependent Role="produit">
+        <PropertyRef Name="categorieID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__facturati__clien__1CF15040">
+    <End Role="client" Type="Self.client" Multiplicity="0..1" />
+    <End Role="facturation" Type="Self.facturation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client">
+        <PropertyRef Name="clientID" />
+      </Principal>
+      <Dependent Role="facturation">
+        <PropertyRef Name="clientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__historiqu__clien__3E52440B">
+    <End Role="client" Type="Self.client" Multiplicity="0..1" />
+    <End Role="historiquefacturation" Type="Self.historiquefacturation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client">
+        <PropertyRef Name="clientID" />
+      </Principal>
+      <Dependent Role="historiquefacturation">
+        <PropertyRef Name="clientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__historiqu__clien__47DBAE45">
+    <End Role="client" Type="Self.client" Multiplicity="0..1" />
+    <End Role="historiquefacturation" Type="Self.historiquefacturation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client">
+        <PropertyRef Name="clientID" />
+      </Principal>
+      <Dependent Role="historiquefacturation">
+        <PropertyRef Name="clientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__historiqu__clien__4AB81AF0">
+    <End Role="client" Type="Self.client" Multiplicity="0..1" />
+    <End Role="historiquefacturation" Type="Self.historiquefacturation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client">
+        <PropertyRef Name="clientID" />
+      </Principal>
+      <Dependent Role="historiquefacturation">
+        <PropertyRef Name="clientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__historiqu__clien__4E88ABD4">
+    <End Role="client" Type="Self.client" Multiplicity="0..1" />
+    <End Role="historiquefacturation" Type="Self.historiquefacturation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client">
+        <PropertyRef Name="clientID" />
+      </Principal>
+      <Dependent Role="historiquefacturation">
+        <PropertyRef Name="clientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tableacha__clien__4222D4EF">
+    <End Role="client" Type="Self.client" Multiplicity="0..1" />
+    <End Role="tableachat" Type="Self.tableachat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client">
+        <PropertyRef Name="clientID" />
+      </Principal>
+      <Dependent Role="tableachat">
+        <PropertyRef Name="clientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__historiqu__factu__3F466844">
+    <End Role="facturation" Type="Self.facturation" Multiplicity="0..1" />
+    <End Role="historiquefacturation" Type="Self.historiquefacturation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="facturation">
+        <PropertyRef Name="facturationID" />
+      </Principal>
+      <Dependent Role="historiquefacturation">
+        <PropertyRef Name="facturationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__historiqu__factu__48CFD27E">
+    <End Role="facturation" Type="Self.facturation" Multiplicity="0..1" />
+    <End Role="historiquefacturation" Type="Self.historiquefacturation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="facturation">
+        <PropertyRef Name="facturationID" />
+      </Principal>
+      <Dependent Role="historiquefacturation">
+        <PropertyRef Name="facturationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__historiqu__factu__4BAC3F29">
+    <End Role="facturation" Type="Self.facturation" Multiplicity="0..1" />
+    <End Role="historiquefacturation" Type="Self.historiquefacturation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="facturation">
+        <PropertyRef Name="facturationID" />
+      </Principal>
+      <Dependent Role="historiquefacturation">
+        <PropertyRef Name="facturationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__historiqu__factu__4F7CD00D">
+    <End Role="facturation" Type="Self.facturation" Multiplicity="0..1" />
+    <End Role="historiquefacturation" Type="Self.historiquefacturation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="facturation">
+        <PropertyRef Name="facturationID" />
+      </Principal>
+      <Dependent Role="historiquefacturation">
+        <PropertyRef Name="facturationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__produit__fournis__37A5467C">
+    <End Role="fournisseur" Type="Self.fournisseur" Multiplicity="0..1" />
+    <End Role="produit" Type="Self.produit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="fournisseur">
+        <PropertyRef Name="fournisseurID" />
+      </Principal>
+      <Dependent Role="produit">
+        <PropertyRef Name="fournisseurID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__historiqu__produ__3D5E1FD2">
+    <End Role="produit" Type="Self.produit" Multiplicity="0..1" />
+    <End Role="historiquefacturation" Type="Self.historiquefacturation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="produit">
+        <PropertyRef Name="produitID" />
+      </Principal>
+      <Dependent Role="historiquefacturation">
+        <PropertyRef Name="produitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__historiqu__produ__49C3F6B7">
+    <End Role="produit" Type="Self.produit" Multiplicity="0..1" />
+    <End Role="historiquefacturation" Type="Self.historiquefacturation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="produit">
+        <PropertyRef Name="produitID" />
+      </Principal>
+      <Dependent Role="historiquefacturation">
+        <PropertyRef Name="produitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__historiqu__produ__4CA06362">
+    <End Role="produit" Type="Self.produit" Multiplicity="0..1" />
+    <End Role="historiquefacturation" Type="Self.historiquefacturation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="produit">
+        <PropertyRef Name="produitID" />
+      </Principal>
+      <Dependent Role="historiquefacturation">
+        <PropertyRef Name="produitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__historiqu__produ__5070F446">
+    <End Role="produit" Type="Self.produit" Multiplicity="0..1" />
+    <End Role="historiquefacturation" Type="Self.historiquefacturation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="produit">
+        <PropertyRef Name="produitID" />
+      </Principal>
+      <Dependent Role="historiquefacturation">
+        <PropertyRef Name="produitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__historiqu__produ__3A81B327">
+    <End Role="produit" Type="Self.produit" Multiplicity="0..1" />
+    <End Role="historiqueprix" Type="Self.historiqueprix" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="produit">
+        <PropertyRef Name="produitID" />
+      </Principal>
+      <Dependent Role="historiqueprix">
+        <PropertyRef Name="produitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tableacha__produ__4316F928">
+    <End Role="produit" Type="Self.produit" Multiplicity="0..1" />
+    <End Role="tableachat" Type="Self.tableachat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="produit">
+        <PropertyRef Name="produitID" />
+      </Principal>
+      <Dependent Role="tableachat">
+        <PropertyRef Name="produitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__users__profileID__29572725">
+    <End Role="profil" Type="Self.profil" Multiplicity="0..1" />
+    <End Role="users" Type="Self.user" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="profil">
+        <PropertyRef Name="profileID" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="profileID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="facturationclientBOUEntities4" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="categories" EntityType="Self.categorie" />
+    <EntitySet Name="clients" EntityType="Self.client" />
+    <EntitySet Name="facturations" EntityType="Self.facturation" />
+    <EntitySet Name="fournisseurs" EntityType="Self.fournisseur" />
+    <EntitySet Name="historiquefacturations" EntityType="Self.historiquefacturation" />
+    <EntitySet Name="historiqueprixes" EntityType="Self.historiqueprix" />
+    <EntitySet Name="Payements" EntityType="Self.Payement" />
+    <EntitySet Name="produits" EntityType="Self.produit" />
+    <EntitySet Name="profils" EntityType="Self.profil" />
+    <EntitySet Name="tableachats" EntityType="Self.tableachat" />
+    <EntitySet Name="users" EntityType="Self.user" />
+    <AssociationSet Name="FK__produit__categor__36B12243" Association="Self.FK__produit__categor__36B12243">
+      <End Role="categorie" EntitySet="categories" />
+      <End Role="produit" EntitySet="produits" />
+    </AssociationSet>
+    <AssociationSet Name="FK__facturati__clien__1CF15040" Association="Self.FK__facturati__clien__1CF15040">
+      <End Role="client" EntitySet="clients" />
+      <End Role="facturation" EntitySet="facturations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__historiqu__clien__3E52440B" Association="Self.FK__historiqu__clien__3E52440B">
+      <End Role="client" EntitySet="clients" />
+      <End Role="historiquefacturation" EntitySet="historiquefacturations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__historiqu__clien__47DBAE45" Association="Self.FK__historiqu__clien__47DBAE45">
+      <End Role="client" EntitySet="clients" />
+      <End Role="historiquefacturation" EntitySet="historiquefacturations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__historiqu__clien__4AB81AF0" Association="Self.FK__historiqu__clien__4AB81AF0">
+      <End Role="client" EntitySet="clients" />
+      <End Role="historiquefacturation" EntitySet="historiquefacturations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__historiqu__clien__4E88ABD4" Association="Self.FK__historiqu__clien__4E88ABD4">
+      <End Role="client" EntitySet="clients" />
+      <End Role="historiquefacturation" EntitySet="historiquefacturations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tableacha__clien__4222D4EF" Association="Self.FK__tableacha__clien__4222D4EF">
+      <End Role="client" EntitySet="clients" />
+      <End Role="tableachat" EntitySet="tableachats" />
+    </AssociationSet>
+    <AssociationSet Name="FK__historiqu__factu__3F466844" Association="Self.FK__historiqu__factu__3F466844">
+      <End Role="facturation" EntitySet="facturations" />
+      <End Role="historiquefacturation" EntitySet="historiquefacturations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__historiqu__factu__48CFD27E" Association="Self.FK__historiqu__factu__48CFD27E">
+      <End Role="facturation" EntitySet="facturations" />
+      <End Role="historiquefacturation" EntitySet="historiquefacturations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__historiqu__factu__4BAC3F29" Association="Self.FK__historiqu__factu__4BAC3F29">
+      <End Role="facturation" EntitySet="facturations" />
+      <End Role="historiquefacturation" EntitySet="historiquefacturations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__historiqu__factu__4F7CD00D" Association="Self.FK__historiqu__factu__4F7CD00D">
+      <End Role="facturation" EntitySet="facturations" />
+      <End Role="historiquefacturation" EntitySet="historiquefacturations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__produit__fournis__37A5467C" Association="Self.FK__produit__fournis__37A5467C">
+      <End Role="fournisseur" EntitySet="fournisseurs" />
+      <End Role="produit" EntitySet="produits" />
+    </AssociationSet>
+    <AssociationSet Name="FK__historiqu__produ__3D5E1FD2" Association="Self.FK__historiqu__produ__3D5E1FD2">
+      <End Role="produit" EntitySet="produits" />
+      <End Role="historiquefacturation" EntitySet="historiquefacturations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__historiqu__produ__49C3F6B7" Association="Self.FK__historiqu__produ__49C3F6B7">
+      <End Role="produit" EntitySet="produits" />
+      <End Role="historiquefacturation" EntitySet="historiquefacturations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__historiqu__produ__4CA06362" Association="Self.FK__historiqu__produ__4CA06362">
+      <End Role="produit" EntitySet="produits" />
+      <End Role="historiquefacturation" EntitySet="historiquefacturations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__historiqu__produ__5070F446" Association="Self.FK__historiqu__produ__5070F446">
+      <End Role="produit" EntitySet="produits" />
+      <End Role="historiquefacturation" EntitySet="historiquefacturations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__historiqu__produ__3A81B327" Association="Self.FK__historiqu__produ__3A81B327">
+      <End Role="produit" EntitySet="produits" />
+      <End Role="historiqueprix" EntitySet="historiqueprixes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tableacha__produ__4316F928" Association="Self.FK__tableacha__produ__4316F928">
+      <End Role="produit" EntitySet="produits" />
+      <End Role="tableachat" EntitySet="tableachats" />
+    </AssociationSet>
+    <AssociationSet Name="FK__users__profileID__29572725" Association="Self.FK__users__profileID__29572725">
+      <End Role="profil" EntitySet="profils" />
+      <End Role="users" EntitySet="users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

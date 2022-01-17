@@ -1,0 +1,139 @@
+﻿@model CRDLPROJET.Models.tableachat
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Layout/_Default.cshtml";
+}
+@Html.Raw(TempData["msg"])
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main" style="background-color:aquamarine">
+   <h2 style="text-align:center"><i>Identification Du Client</i></h2>
+   
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <br><br>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            @{
+
+                IEnumerable<CRDLPROJET.Models.client> clients = ViewData["client"] as IEnumerable<CRDLPROJET.Models.client>;
+            }
+
+            <div class="col-md-5">
+
+                <label><b style="font-size:20px">Client</b></label>
+
+                <select class="form-control" name="clientID" id="clientID">
+                    <option>select client</option>
+                    @foreach (CRDLPROJET.Models.client item in clients)
+                    {
+                        <option value="@item.clientID">@item.nomclient &emsp; @item.numtel</option>
+                    }
+                </select>
+
+            </div>
+
+
+
+            <div class="col-md-5">
+                <label><b style="font-size:20px">Categorie</b></label>
+
+                @Html.DropDownList("categorieID", null, "Select a category", htmlAttributes: new { @class = "form-control" })
+
+            </div>
+
+            <div class="col-md-5">
+
+                <label><b style="font-size:20px">Produit</b></label>
+
+                <select class="form-control" name="produitID" id="produitID">
+                </select>
+
+            </div>
+            @{
+
+                IEnumerable<CRDLPROJET.Models.facturation> facturations = ViewData["facturation"] as IEnumerable<CRDLPROJET.Models.facturation>;
+            }
+
+            @{
+                int val = 0;
+
+            }
+            @foreach (CRDLPROJET.Models.facturation item in facturations)
+            {
+                val = item.facturationID;
+            }
+
+            @{
+                int m = val;
+            }
+
+            @{
+                var dat = DateTime.Now.ToString("dd-MM-yyyy"); ;
+            }
+            <input type="hidden" name="facturationID" value="@m" />
+            <input type="hidden" name="datehistofacturation" value="@dat" />
+            <input type="hidden" name="datefacturation" value="@dat" />
+
+            <div class="col-md-5">
+                <label><b style="font-size:20px">Prix Unitaire</b></label>
+
+                <input type="text" readonly="" name="prixunitaire" class="form-control prixunitaire" />
+
+            </div>
+
+            <div class="col-md-5">
+                <label><b style="font-size:20px">Quantite</b></label>
+
+                <input type="text" required="" name="Quantite" id="Quantite" class="form-control Quantite" />
+
+            </div>
+
+            <div class="col-md-5">
+                <label><b style="font-size:20px">Total</b></label>
+
+                <input type="text" readonly="" name="Total" id="tot" class="form-control total" />
+
+            </div>
+
+            <div class="col-md-3">
+                <br><br>
+                <input type="submit" value="Ajouter" class="btn btn-primary" />
+
+            </div>
+        </div>
+    }
+
+    <div class="col-md-3">
+        <br><br>
+
+        <p class="btn btn-warning">
+            @Html.ActionLink("Retour", "Index1","clients", null, new { style = "text-decoration:none;" })
+        </p>
+    </div>
+    @*<div class="col-md-3">
+        <h1 class="btn btn-success">
+            @Html.ActionLink("Imprimer", "Index", "tableachats")
+        </h1>
+    </div>*@
+
+    @*<div>
+            @Html.ActionLink("Back to List", "Index")
+            <h3 class="pull-right">
+                @Html.ActionLink("Imprimer", "Index", "tableachats")
+            </h3>
+        </div>*@
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br>
+</div>
+            @*</div>
+        </div>
+    </div>
+</div>*@
+
+
+

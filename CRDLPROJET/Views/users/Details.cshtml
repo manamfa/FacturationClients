@@ -1,0 +1,72 @@
+﻿@model CRDLPROJET.Models.user
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Layouts/_Default.cshtml";
+}
+
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="col-lg-12" style="background-color:aquamarine">
+        <div class="panel panel-default" style="background-color:aquamarine">
+            @*<div class="panel-heading" style="background-color:aquamarine"></div>*@
+            <div class="panel-body" style="background-color:aquamarine">
+                <div class="col-md-6" style="background-color:aquamarine">
+                    <div>
+                        <h4 style="text-align:center">Utilisateur</h4>
+                        <hr />
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.username)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.username)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.userpassword)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.userpassword)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.useremail)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.useremail)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.dateinsertion)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.dateinsertion)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.profil.profilename)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.profil.profilename)
+                            </dd>
+
+                        </dl>
+                    </div>
+                    <p class="btn btn-warning">
+                        @Html.ActionLink("Edit", "Edit", new { id = Model.userID }) |
+                        @Html.ActionLink("Retour", "Index", null, new { style = "text-decoration:none;" })
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</div>

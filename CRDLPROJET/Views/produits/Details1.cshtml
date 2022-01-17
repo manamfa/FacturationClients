@@ -1,0 +1,84 @@
+﻿@model CRDLPROJET.Models.produit
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Layout/_Default.cshtml";
+}
+
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="col-lg-12" style="background-color:aquamarine">
+        <div class="panel panel-default" style="background-color:aquamarine">
+            @*<div class="panel-heading" style="background-color:aquamarine"></div>*@
+            <div class="panel-body" style="background-color:aquamarine">
+                <div class="col-md-6" style="background-color:aquamarine">
+                    <div>
+                        <h4 style="text-align:center">produit</h4>
+                        <hr />
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.nomproduit)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.nomproduit)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.prixdeventeunitaire)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.prixdeventeunitaire)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Quantite)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Quantite)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.prixunitaireachat)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.prixunitaireachat)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.dateentree)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.dateentree)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.categorie.nomcategorie)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.categorie.nomcategorie)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.fournisseur.nomfournisseur)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.fournisseur.nomfournisseur)
+                            </dd>
+
+                        </dl>
+                    </div>
+                    <p class="btn btn-warning">
+                        @*@Html.ActionLink("Edit", "Edit", new { id = Model.produitID })*@ |
+                        @Html.ActionLink("Back to List", "Index1")
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

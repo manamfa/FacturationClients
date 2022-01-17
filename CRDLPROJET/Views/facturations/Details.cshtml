@@ -1,0 +1,35 @@
+﻿@model CRDLPROJET.Models.facturation
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Layouts/_Default.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>facturation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.datefacturation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.datefacturation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.client.nomclient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.client.nomclient)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.facturationID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

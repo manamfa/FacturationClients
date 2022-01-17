@@ -1,0 +1,103 @@
+﻿@model CRDLPROJET.Models.historiquefacturation
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Layout/_Default.cshtml";
+}
+@Html.Raw(TempData["msg"])
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="col-lg-12" style="background-color:aquamarine">
+        <div class="panel panel-default" style="background-color:aquamarine">
+
+            <div class="panel-body" style="background-color:aquamarine">
+                <div class="col-md-6" style="background-color:aquamarine">
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-horizontal">
+                            <h4 style="text-align:center">historiquefacturation</h4>
+
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            @Html.HiddenFor(model => model.historiquefacturationID)
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.clientID, "produit", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.DropDownList("produitID", null, htmlAttributes: new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.produitID, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            @*<div class="form-group">
+                                    @Html.LabelFor(model => model.produitID, "produit", htmlAttributes: new { @class = "control - label col - md - 2" })
+                                    <div class="col-md-10">
+                                        @Html.DropDownList("produitID", null, htmlAttributes: new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.produitID, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>*@
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.clientID, "client", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.DropDownList("clientID", null, htmlAttributes: new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.clientID, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.facturationID, "facturation", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.DropDownList("facturationID", null, htmlAttributes: new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.facturationID, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.prixunitaire, "Prix Unitaire", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.prixunitaire, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.prixunitaire, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Quantite, "Quantite", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.Quantite, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Quantite, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Total, "Total", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.Total, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Total, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.datehistofacturation, "Date", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.datehistofacturation, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.datehistofacturation, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" value="Sauvegarder" class="btn btn-primary" />
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    <div class="btn btn-warning">
+                        @Html.ActionLink("Retour", "Index2")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

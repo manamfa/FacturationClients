@@ -1,0 +1,46 @@
+﻿@model CRDLPROJET.Models.user
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+@RenderPage("~/Views/Partials/_Head.cshtml")
+<body style="background-image:url(Assets/fonts/bout6.png)">
+    @Html.Raw(TempData["msg"])
+     <br/><br/><br/><br/><br/><br/><br/>
+    <div class="row" @*style="background-color:aliceblue"*@>
+        <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
+            <div class="login-panel panel panel-default">
+                <div class="panel-heading" style="text-align:center">AUTHENTIFICATION</div>
+                <h2 style="text-align:center"><strong>Facturation Des Clients</strong></h2>
+                    <div class="panel-body">
+                    <div class="col-lg-12">
+
+
+
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <div class="form-group">
+                                @Html.TextBoxFor(model => model.username, new { @class = "form-control", placeholder = "Enter your username", autofocus = "", autocomplete = "OFF" })
+                                @Html.ValidationMessageFor(model => model.username, "", new { @class = "error-text" })
+                            </div>
+                            <div class="form-group">
+                                @Html.PasswordFor(model => model.userpassword, new { @class = "form-control", placeholder = "Enter your password", autocomplete = "OFF" })
+                                @Html.ValidationMessageFor(model => model.userpassword)
+                            </div>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                            <button type="reset" class="btn btn-reset">Reset</button>
+
+                        }
+
+                    </div>
+                </div>
+            </div><!-- /.col-->
+        </div><!-- /.row -->
+    </div>
+</body>
+</html>

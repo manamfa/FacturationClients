@@ -1,0 +1,153 @@
+﻿@model CRDLPROJET.Models.client
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Layouts/_Default.cshtml";
+}
+@Html.Raw(TempData["msg"])
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main" style="background-color:aquamarine">
+    <h2 style="text-align:center"><i>Identification Du Client</i></h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-horizontal">
+            <br /><br /><br />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="col-md-5">
+                <label><b style="font-size:20px">Nom</b></label>
+
+                <input type="text" required="" name="nomclient" class="form-control nomclient" />
+
+            </div>
+
+            <div class="col-md-5">
+
+                <label><b style="font-size:20px">Prenom</b></label>
+
+                <input type="text" required="" name="prenomclient" class="form-control prenomclient" />
+
+            </div>
+
+            <div class="col-md-5">
+
+                <label><b style="font-size:20px">Telephone</b></label>
+
+                <input type="text" required="" name="numtel" class="form-control numtel" />
+
+            </div>
+
+
+
+
+            @{
+
+                IEnumerable<CRDLPROJET.Models.facturation> facturations = ViewData["facturation"] as IEnumerable<CRDLPROJET.Models.facturation>;
+            }
+
+            @{
+
+                IEnumerable<CRDLPROJET.Models.client> clients = ViewData["client"] as IEnumerable<CRDLPROJET.Models.client>;
+            }
+
+            @{
+                int val = 0;
+                int va = 0;
+            }
+
+
+            @foreach (CRDLPROJET.Models.facturation item in facturations)
+            {
+                val = item.facturationID;
+            }
+            @{
+                int m = val + 1;
+            }
+            @foreach (CRDLPROJET.Models.client item in clients)
+            {
+                va = item.clientID;
+            }
+
+            @{
+                int n = va + 1;
+            }
+
+            <input type="hidden" name="facturationID" value="@m" />
+            @*@m*@
+            <div class="col-md-5">
+                <label><b style="font-size:20px">Adresse</b></label>
+
+                <input type="text" name="adresse" id="adresse" class="form-control adresse" />
+
+            </div>
+            <div class="col-md-5">
+                <label><b style="font-size:20px">Categorie</b></label>
+
+                @Html.DropDownList("categorieID", null, "Select a category", htmlAttributes: new { @class = "form-control" })
+
+            </div>
+
+            <div class="col-md-5">
+
+                <label><b style="font-size:20px">Produit</b></label>
+
+                <select class="form-control" name="produitID" id="produitID">
+                </select>
+
+            </div>
+            <div class="col-md-5">
+
+                <label><b style="font-size:20px">Prix Unitaire</b></label>
+
+                <input type="text" name="prixunitaire" readonly="" class="form-control prixunitaire" />
+
+            </div>
+
+            <div class="col-md-5">
+                <label><b style="font-size:20px">Quantite</b></label>
+
+                <input type="text" required="" name="Quantite" id="Quantite" class="form-control Quantite" />
+
+            </div>
+
+            <div class="col-md-5">
+                <label><b style="font-size:20px">Total</b></label>
+
+                <input type="text" readonly="" name="Total" id="tot" class="form-control total" />
+            </div>
+            <div class="col-md-5">
+                <label><b style="font-size:20px">Date</b></label>
+
+                <h1><input type="text" value="@DateTime.Now.ToString("dd-MM-yyyy")" name="" id="" readonly="" class="form-control " /></h1>
+
+            </div>
+
+            @{
+                var dat = DateTime.Now.ToString("dd-MM-yyyy"); ;
+            }
+
+            <input type="hidden" name="datehistofacturation" value="@dat" />
+            <input type="hidden" name="datefacturation" value="@dat" />
+            <input type="hidden" name="clientID" value="@n" />
+            <div class="col-md-3">
+
+                <input type="submit" value="Ajouter" class="btn btn-primary" />
+
+            </div>
+        </div>
+    }
+
+    <div class="col-md-3">
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        &emsp;&emsp;&emsp;&emsp;&emsp;
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        <p class="btn btn-warning">
+            @Html.ActionLink("Retour", "Index", null, new { style = "text-decoration:none;" })
+        </p>
+    </div>
+    <br /><br /><br /><br /><br /><br /><br/><br/><br/><br/>
+    <br /><br /><br /><br /><br /><br /><br/><br/><br/><br/>
+</div>
+     
+
+

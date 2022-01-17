@@ -1,0 +1,224 @@
+﻿@model CRDLPROJET.Models.tableachat
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Layout/_Default.cshtml";
+}
+
+@*@{
+       IEnumerable<CRDLPROJET.Models.tableachat> tableachats = ViewData["table"] as IEnumerable<CRDLPROJET.Models.tableachat>;
+   }*@
+
+
+@{
+
+    IEnumerable<CRDLPROJET.Models.client> clients = ViewData["client"] as IEnumerable<CRDLPROJET.Models.client>;
+}
+
+@{
+    int cl = 0;
+    string nom = null;
+    string preno = null;
+
+}
+
+@foreach (CRDLPROJET.Models.client item in clients)
+{
+    cl = item.clientID;
+    nom = item.nomclient;
+    preno = item.prenomclient;
+}
+
+
+@Html.Raw(TempData["msg"])
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main" style="background-color:aquamarine">
+    <h3 style="text-align:center"><strong>Client :@nom @preno</strong></h3>
+    @*<h2>  @nom @preno</h2>*@
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+            @{
+                int id = cl;
+            }
+
+            <input type="hidden" name="clientID" value="@id" />
+
+
+
+            <div class="col-md-5">
+                <label><b style="font-size:20px">Categorie</b></label>
+
+                @Html.DropDownList("categorieID", null, "Select a category", htmlAttributes: new { @class = "form-control" })
+
+            </div>
+
+            <div class="col-md-5">
+
+                <label><b style="font-size:20px">Produit</b></label>
+
+                <select class="form-control" name="produitID" id="produitID">
+                </select>
+
+            </div>
+            @{
+
+                IEnumerable<CRDLPROJET.Models.facturation> facturations = ViewData["facturation"] as IEnumerable<CRDLPROJET.Models.facturation>;
+            }
+
+            @{
+                int val = 0;
+
+            }
+            @foreach (CRDLPROJET.Models.facturation item in facturations)
+            {
+                val = item.facturationID;
+            }
+
+            @{
+                int m = val;
+            }
+
+            @{
+                var dat = DateTime.Now.ToString("dd-MM-yyyy");
+            }
+            <input type="hidden" name="facturationID" value="@m" />
+            <input type="hidden" name="datehistofacturation" value="@dat" />
+            <input type="hidden" name="datefacturation" value="@dat" />
+
+            <div class="col-md-5">
+                <label><b style="font-size:20px">Prix Unitaire</b></label>
+
+                <input type="text" readonly="" name="prixunitaire" class="form-control prixunitaire" />
+
+            </div>
+
+            <div class="col-md-5">
+                <label><b style="font-size:20px">Quantite</b></label>
+
+                <input type="text" required="" name="Quantite" id="Quantite" class="form-control Quantite" />
+
+            </div>
+
+            <div class="col-md-5">
+                <label><b style="font-size:20px">Total</b></label>
+
+                <input type="text" readonly="" name="Total" id="tot" class="form-control total" />
+
+            </div>
+
+            <div class="col-md-5">
+                <label><b style="font-size:20px">Date</b></label>
+
+                <input type="text" readonly="" value="@DateTime.Now.ToString("dd-MM-yyyy")" class="form-control total" />
+
+            </div>
+
+            <div class="col-md-3">
+                <br><br>
+                <input type="submit" value="Ajouter" class="btn btn-primary" />
+
+            </div>
+        </div>
+    }
+
+    <div class="col-md-3">
+        <br><br>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+
+        <p class="btn btn-warning">
+            @Html.ActionLink("Retour", "Index", null, new { style = "text-decoration:none;" })
+        </p>
+    </div>
+
+    @{
+
+        IEnumerable<CRDLPROJET.Models.tableachat> tableachat = ViewData["tableachat"] as IEnumerable<CRDLPROJET.Models.tableachat>;
+    }
+
+    <table class="table table-bordered">
+
+        <tr>
+            <th>
+                #No
+            </th>
+            <th>
+                Produit
+            </th>
+            <th>
+                Quantite
+            </th>
+            <th>
+                Prix Unitaire
+            </th>
+
+            <th>Total</th>
+            <th>Action</th>
+        </tr>
+        @{
+            int no = 0;
+        }
+        @foreach (CRDLPROJET.Models.tableachat item in tableachat)
+        {
+            no++;
+            <tr>
+                <td>
+                    @no
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.produit.nomproduit)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantite)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.produit.prixdeventeunitaire)
+                </td>
+
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Total)
+                </td>
+
+                <td>
+                    @*@Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "btn btn-sm btn-primary fa fa-pencil" }) |*@
+                    @*@Html.ActionLink("Details", "Details", new { id = item.ID }) |*@
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "btn btn-sm btn-danger fa fa-trach" })
+                </td>
+            </tr>
+
+        }
+    </table>
+    @{ int somme = 0;}
+
+    @foreach (CRDLPROJET.Models.tableachat item in tableachat)
+    {
+
+        somme = somme + @item.Total.Value;
+    }
+    <h4 class="pull-left">
+        <strong>
+            Montant Total &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            @*&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;*@
+            <input type="text" value="@somme &emsp;Fbu" />
+
+        </strong>
+    </h4>
+
+    <div class="col-md-3">
+        <h1 class="btn btn-success">
+            @Html.ActionLink("Imprimer", "PrintPage", @*"tableachats",*@ null, new { style = "text-decoration:none;" })
+        </h1>
+    </div>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+</div>
+

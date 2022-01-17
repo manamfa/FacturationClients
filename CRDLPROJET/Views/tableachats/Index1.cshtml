@@ -1,0 +1,135 @@
+﻿
+@model IEnumerable<CRDLPROJET.Models.tableachat>
+
+@{
+        ViewBag.Title = "Index1";
+        Layout = "~/Views/Layout/_Default.cshtml";
+ }      
+        
+@{
+    
+    IEnumerable<CRDLPROJET.Models.facturation> facturations = ViewData["facturation"] as IEnumerable<CRDLPROJET.Models.facturation>;
+}
+
+@{
+    int val = 0;
+}
+
+
+@foreach (CRDLPROJET.Models.facturation item in facturations)
+{
+    val = item.facturationID;
+}
+
+@{
+    int m = val;
+}
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main" style="background-color:aliceblue">
+
+    <h3 style="text-align:center">Facture Numero:@m</h3>
+
+    @Html.ActionLink("Imprimer", "Index", "tableachats", null, new { style = "text-decoration:none;" })
+    <h3 class="pull-right">
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        &emsp;&emsp;&emsp;&emsp;&emsp;
+
+        @DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss")
+    </h3>
+
+    @{
+        string nom = null;
+        string prenom = null;
+        string teleph = null;
+
+    }
+
+
+    @foreach (var item in Model)
+    {
+        nom = item.client.nomclient;
+        prenom = item.client.prenomclient;
+        teleph = item.client.numtel;
+    }
+
+    @{
+        string name = nom;
+        string prename = prenom;
+        string telephone = teleph;
+
+    }
+    <h4>Nom Boutique:ADONAI</h4>
+    <h4>AVENUE:MAZA</h4><br />
+    <h4>Nom Boutiquier:NIYONZIMA Pacifique</h4><br />
+    <h4>Tél +257 22226123/22226060</h4>
+
+    <br />
+    <br />
+    <br />
+    <h3 class="pull-left"><strong>Nom & Prenom Client:@Html.DisplayFor(modelItem => name)&emsp;@Html.DisplayFor(modelItem => prename)</strong></h3>
+    <h3 class="pull-left"><strong>Numero Du Télepnone:@telephone</strong><br /><br /><br /><br /><br /><br /></h3>
+    <table class="table">
+
+        <tr>
+            <th>
+                #No&emsp;&emsp;
+            </th>
+            <th>
+                Produit : &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            </th>
+            <th>
+                Quantite : &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            </th>
+            <th>
+                Prix Unitaire : &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            </th>
+
+            <th>Total : &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</th>
+        </tr>
+        @{
+            int no = 0;
+        }
+        @foreach (var item in Model)
+        {
+            no++;
+            <tr>
+                <td>
+                    @no&emsp;&emsp;
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.produit.nomproduit)&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantite)&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.produit.prixdeventeunitaire)&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                </td>
+
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Total)&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                </td>
+
+                <td>
+                    @*@Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "btn btn-sm btn-primary fa fa-pencil" }) |*@
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "btn btn-sm btn-danger fa fa-trach" })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+    Montant Total:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    &emsp;&emsp;&emsp;&emsp;&emsp;
+
+
+    @Model.Sum(i => i.Total)&emsp;Fbu
+
+</div> 

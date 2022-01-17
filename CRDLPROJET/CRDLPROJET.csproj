@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FD5E99FB-26A7-4191-A89E-ACA3896D5504}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CRDLPROJET</RootNamespace>
+    <AssemblyName>CRDLPROJET</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44381</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Rotativa.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rotativa.Core.2.0.0\lib\net45\Rotativa.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Rotativa.MVC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rotativa.MVC.2.0.3\lib\net45\Rotativa.MVC.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\categoriesController.cs" />
+    <Compile Include="Controllers\clientsController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\facturationsController.cs" />
+    <Compile Include="Controllers\fournisseursController.cs" />
+    <Compile Include="Controllers\historiquefacturationsController.cs" />
+    <Compile Include="Controllers\historiqueprixesController.cs" />
+    <Compile Include="Controllers\produitsController.cs" />
+    <Compile Include="Controllers\profilsController.cs" />
+    <Compile Include="Controllers\tableachatsController.cs" />
+    <Compile Include="Controllers\usersController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\categorie.cs">
+      <DependentUpon>manamfasha.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\client.cs">
+      <DependentUpon>manamfasha.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\facturation.cs">
+      <DependentUpon>manamfasha.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fournisseur.cs">
+      <DependentUpon>manamfasha.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Histofactmodel.cs" />
+    <Compile Include="Models\historiquefacturation.cs">
+      <DependentUpon>manamfasha.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\historiqueprix.cs">
+      <DependentUpon>manamfasha.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\manamfasha.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>manamfasha.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\manamfasha.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>manamfasha.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\manamfasha.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>manamfasha.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Payement.cs">
+      <DependentUpon>manamfasha.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\produit.cs">
+      <DependentUpon>manamfasha.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\profil.cs">
+      <DependentUpon>manamfasha.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tableachat.cs">
+      <DependentUpon>manamfasha.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\testquantite.cs" />
+    <Compile Include="Models\user.cs">
+      <DependentUpon>manamfasha.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\css\bootstrap-table.css" />
+    <Content Include="Assets\css\bootstrap-theme.css" />
+    <Content Include="Assets\css\bootstrap-theme.min.css" />
+    <Content Include="Assets\css\bootstrap.css" />
+    <Content Include="Assets\css\bootstrap.min.css" />
+    <Content Include="Assets\css\dataTables.bootstrap4.min.css" />
+    <Content Include="Assets\css\datepicker.css" />
+    <Content Include="Assets\css\datepicker3.css" />
+    <Content Include="Assets\css\font-awesome.css" />
+    <Content Include="Assets\css\font-awesome.min.css" />
+    <Content Include="Assets\css\styles.css" />
+    <Content Include="Assets\fonts\bout.jpg" />
+    <Content Include="Assets\fonts\bout1.png" />
+    <Content Include="Assets\fonts\bout2.png" />
+    <Content Include="Assets\fonts\bout3.jpg" />
+    <Content Include="Assets\fonts\bout4.png" />
+    <Content Include="Assets\fonts\boutique.jpg" />
+    <Content Include="Assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\fonts\har.jpg" />
+    <Content Include="Assets\fonts\har1.jpg" />
+    <Content Include="Assets\js\bootstrap-datepicker.js" />
+    <Content Include="Assets\js\bootstrap.js" />
+    <Content Include="Assets\js\bootstrap.min.js" />
+    <Content Include="Assets\js\chart-data.js" />
+    <Content Include="Assets\js\chart.js" />
+    <Content Include="Assets\js\chart.min.js" />
+    <Content Include="Assets\js\custom.js" />
+    <Content Include="Assets\js\dataTables.bootstrap4.min.js" />
+    <Content Include="Assets\js\easypiechart-data.js" />
+    <Content Include="Assets\js\easypiechart.js" />
+    <Content Include="Assets\js\html5shiv.min.js" />
+    <Content Include="Assets\js\jquery-1.11.1.js" />
+    <Content Include="Assets\js\jquery-1.11.1.min.js" />
+    <Content Include="Assets\js\jquery-3.5.1.js" />
+    <Content Include="Assets\js\jquery.dataTables.min.js" />
+    <Content Include="Assets\js\lumino.glyphs.js" />
+    <Content Include="Assets\js\main.js" />
+    <Content Include="Assets\js\npm.js" />
+    <Content Include="Assets\js\respond.min.js" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Models\manamfasha.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>manamfasha.edmx</DependentUpon>
+      <LastGenOutput>manamfasha.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\manamfasha.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>manamfasha.edmx</DependentUpon>
+      <LastGenOutput>manamfasha.cs</LastGenOutput>
+    </Content>
+    <Content Include="Rotativa\wkhtmltopdf.exe" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Assets\css\bootstrap-theme.css.map" />
+    <Content Include="Assets\css\bootstrap-theme.min.css.map" />
+    <Content Include="Assets\css\bootstrap.css.map" />
+    <Content Include="Assets\css\bootstrap.min.css.map" />
+    <Content Include="Assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Assets\fonts\FontAwesome.otf" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="App_Browsers\qt.browser" />
+    <EntityDeploy Include="Models\manamfasha.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>manamfasha.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\manamfasha.edmx.diagram">
+      <DependentUpon>manamfasha.edmx</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Layouts\_Default.cshtml" />
+    <Content Include="Views\Partials\_Head.cshtml" />
+    <Content Include="Views\Partials\_Nav.cshtml" />
+    <Content Include="Views\Partials\_Sidebar.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\Partials\_Sidebarutilisateur.cshtml" />
+    <Content Include="Views\categories\Create.cshtml" />
+    <Content Include="Views\categories\Delete.cshtml" />
+    <Content Include="Views\categories\Details.cshtml" />
+    <Content Include="Views\categories\Edit.cshtml" />
+    <Content Include="Views\categories\Index.cshtml" />
+    <Content Include="Views\clients\Create.cshtml" />
+    <Content Include="Views\clients\Delete.cshtml" />
+    <Content Include="Views\clients\Details.cshtml" />
+    <Content Include="Views\clients\Edit.cshtml" />
+    <Content Include="Views\clients\Index.cshtml" />
+    <Content Include="Views\facturations\Create.cshtml" />
+    <Content Include="Views\facturations\Delete.cshtml" />
+    <Content Include="Views\facturations\Details.cshtml" />
+    <Content Include="Views\facturations\Edit.cshtml" />
+    <Content Include="Views\facturations\Index.cshtml" />
+    <Content Include="Views\fournisseurs\Create.cshtml" />
+    <Content Include="Views\fournisseurs\Delete.cshtml" />
+    <Content Include="Views\fournisseurs\Details.cshtml" />
+    <Content Include="Views\fournisseurs\Edit.cshtml" />
+    <Content Include="Views\fournisseurs\Index.cshtml" />
+    <Content Include="Views\historiquefacturations\Create.cshtml" />
+    <Content Include="Views\historiquefacturations\Delete.cshtml" />
+    <Content Include="Views\historiquefacturations\Details.cshtml" />
+    <Content Include="Views\historiquefacturations\Edit.cshtml" />
+    <Content Include="Views\historiquefacturations\Index.cshtml" />
+    <Content Include="Views\historiqueprixes\Create.cshtml" />
+    <Content Include="Views\historiqueprixes\Delete.cshtml" />
+    <Content Include="Views\historiqueprixes\Details.cshtml" />
+    <Content Include="Views\historiqueprixes\Edit.cshtml" />
+    <Content Include="Views\historiqueprixes\Index.cshtml" />
+    <Content Include="Views\produits\Create.cshtml" />
+    <Content Include="Views\produits\Delete.cshtml" />
+    <Content Include="Views\produits\Details.cshtml" />
+    <Content Include="Views\produits\Edit.cshtml" />
+    <Content Include="Views\produits\Index.cshtml" />
+    <Content Include="Views\profils\Create.cshtml" />
+    <Content Include="Views\profils\Delete.cshtml" />
+    <Content Include="Views\profils\Details.cshtml" />
+    <Content Include="Views\profils\Edit.cshtml" />
+    <Content Include="Views\profils\Index.cshtml" />
+    <Content Include="Views\tableachats\CreateAd.cshtml" />
+    <Content Include="Views\tableachats\Delete.cshtml" />
+    <Content Include="Views\tableachats\Details.cshtml" />
+    <Content Include="Views\tableachats\Edit.cshtml" />
+    <Content Include="Views\tableachats\Index.cshtml" />
+    <Content Include="Views\users\Create.cshtml" />
+    <Content Include="Views\users\Delete.cshtml" />
+    <Content Include="Views\users\Details.cshtml" />
+    <Content Include="Views\users\Edit.cshtml" />
+    <Content Include="Views\users\Index.cshtml" />
+    <Content Include="Views\tableachats\Create1.cshtml" />
+    <Content Include="Views\historiquefacturations\Index1.cshtml" />
+    <Content Include="Views\users\Login.cshtml" />
+    <Content Include="Views\produits\Index1.cshtml" />
+    <Content Include="Views\Layout\_Default.cshtml" />
+    <Content Include="Views\categories\Index1.cshtml" />
+    <Content Include="Views\clients\Index1.cshtml" />
+    <Content Include="Views\clients\Create1.cshtml" />
+    <Content Include="Views\clients\Delete1.cshtml" />
+    <Content Include="Views\clients\Details1.cshtml" />
+    <Content Include="Views\clients\Edit1.cshtml" />
+    <Content Include="Views\tableachats\Create2.cshtml" />
+    <Content Include="Views\produits\Details1.cshtml" />
+    <Content Include="Views\categories\Details1.cshtml" />
+    <Content Include="Views\historiquefacturations\Index2.cshtml" />
+    <Content Include="Views\historiquefacturations\Delete1.cshtml" />
+    <Content Include="Views\historiquefacturations\Edit1.cshtml" />
+    <Content Include="Views\historiqueprixes\Index1.cshtml" />
+    <Content Include="Views\historiqueprixes\Details1.cshtml" />
+    <Content Include="Views\Dashboard\Index1.cshtml" />
+    <Content Include="Views\facturations\Index1.cshtml" />
+    <Content Include="Views\historiquefacturations\Index3.cshtml" />
+    <Content Include="Views\tableachats\Create3.cshtml" />
+    <Content Include="Views\tableachats\Create4.cshtml" />
+    <Content Include="Views\tableachats\Create5.cshtml" />
+    <Content Include="Views\users\Index1.cshtml" />
+    <Content Include="Views\users\Edit1.cshtml" />
+    <Content Include="Views\tableachats\Index1.cshtml" />
+    <Content Include="Views\historiquefacturations\Index5.cshtml" />
+    <Content Include="Views\historiquefacturations\Create1.cshtml" />
+    <Content Include="Views\historiquefacturations\Quantitev.cshtml" />
+    <Content Include="Views\tableachats\Delete1.cshtml" />
+    <Content Include="Views\tableachats\DeleteAd.cshtml" />
+    <Content Include="Views\tableachats\DeleteAdce.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59111</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44381/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

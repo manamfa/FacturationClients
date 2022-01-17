@@ -1,0 +1,57 @@
+﻿@model CRDLPROJET.Models.historiqueprix
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Layout/_Default.cshtml";
+}
+
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="col-lg-12" style="background-color:aqua">
+        <div class="panel panel-default" style="background-color:aqua">
+            @*<div class="panel-heading" style="background-color:aquamarine"></div>*@
+            <div class="panel-body" style="background-color:aqua">
+                <div class="col-md-6" style="background-color:aqua">
+                    <div>
+                        <h4 style="text-align:center">Historique Prix</h4>
+                        <hr />
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.prixdeventeunitaire)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.prixdeventeunitaire)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.datemodification)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.datemodification)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.produit.nomproduit)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.produit.nomproduit)
+                            </dd>
+
+                        </dl>
+                    </div>
+                    <p class="btn btn-warning">
+                        @*@Html.ActionLink("Edit", "Edit", new { id = Model.historiqueprixID }) |*@
+                        @Html.ActionLink("Lister", "Index1")
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</div>
+

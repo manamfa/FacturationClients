@@ -1,0 +1,76 @@
+﻿@model IEnumerable<CRDLPROJET.Models.fournisseur>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layouts/_Default.cshtml";
+}
+
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main" style="background-color:aquamarine">
+    <h1 style="text-align:center"><strong><u>Liste Des Fournisseurs</u><br /></strong></h1>
+
+    <p class="fa fa-plus btn btn btn-warning">
+        @Html.ActionLink("Ajouter Fournisseur", "Create", null, new { style = "text-decoration:none;" })
+    </p>
+    <table id="example" class="table table-striped table-bordered" cellspacing="0" width="98%" style="margin-left:1%">
+        <thead>
+            <tr>
+                <th>
+                    Nom
+                </th>
+                <th>
+                    Prenom
+                </th>
+                <th>
+                    Telephone
+                </th>
+                <th>
+                    Adresse
+                </th>
+                <th>
+                    Date
+                </th>
+                <th>Action</th>
+            </tr>
+        <thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.nomfournisseur)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.prenomfournisseur)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.tel)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.adresse)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.datent)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Modifier", "Edit", new { id = item.fournisseurID }, new { @class = "btn btn-sm btn-primary fa fa-pencil" }) |
+                        @Html.ActionLink("Suprimer", "Delete", new { id = item.fournisseurID }, new { @class = "btn btn-sm btn-danger fa fa-trach" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</div>
+
+
+<script type="text/javascript" class="init">
+
+    $(document).ready(function () {
+        $('#example').DataTable();
+    });
+</script>
+
+

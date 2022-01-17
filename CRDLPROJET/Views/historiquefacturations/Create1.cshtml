@@ -1,0 +1,49 @@
+﻿@model CRDLPROJET.Models.historiquefacturation
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Layout/_Default.cshtml";
+}
+@Html.Raw(TempData["msg"])
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main" style="background-color:aquamarine">
+    <h2 style="text-align:center"><i>Remplissez ces Champs</i></h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <br /><br /><br />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div class="col-md-5">
+                <label><b style="font-size:20px">Date Debit</b></label>
+
+                <h1><input type="text" name="datehistofacturation" id=""  class="form-control"/></h1>
+
+            </div>
+             <div class="col-md-5">
+                <label><b style="font-size:20px">Date Fin</b></label>
+
+                <h1><input type="text"  name="datehistofacturation" id="" class="form-control"/></h1>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <input type="submit" value="Ajouter" class="btn btn-primary" />
+
+            </div>
+        </div>
+    }
+
+    <div class="col-md-3">
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        &emsp;&emsp;&emsp;&emsp;&emsp;
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        <p class="btn btn-warning">
+            @Html.ActionLink("Retour", "Index")
+        </p>
+    </div>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+</div>

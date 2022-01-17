@@ -1,0 +1,96 @@
+﻿@model CRDLPROJET.Models.produit
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Layouts/_Default.cshtml";
+}
+@Html.Raw(TempData["msg"])
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="col-lg-12" style="background-color:aquamarine">
+        <div class="panel panel-default" style="background-color:aquamarine">
+
+            <div class="panel-body" style="background-color:aquamarine">
+                <div class="col-md-6" style="background-color:aquamarine">
+
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-horizontal">
+                            <h4 style="text-align:center"><strong>Produit</strong></h4>
+                            
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            @Html.HiddenFor(model => model.produitID)
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.categorieID, "Categorie", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.DropDownList("categorieID", null, htmlAttributes: new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.categorieID, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.fournisseurID, "Fournisseur", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.DropDownList("fournisseurID", null, htmlAttributes: new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.fournisseurID, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.nomproduit, "Produit", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.nomproduit, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.nomproduit, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.prixdeventeunitaire, "Prix Vente", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.prixdeventeunitaire, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.prixdeventeunitaire, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Quantite, "Quantite", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.Quantite, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Quantite, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.prixunitaireachat, "Prix Achat", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.prixunitaireachat, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.prixunitaireachat, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.dateentree, "Date", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.dateentree, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.dateentree, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                
+                                    <input type="submit" value="Sauvegarder" class="btn btn-success" />
+                                
+                            </div>
+                        </div>
+                    }
+
+                    <div class="col-md-3">
+                       <p class="btn btn btn-warning" > @Html.ActionLink("Retour", "Index", null, new { style = "text-decoration:none;" })</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

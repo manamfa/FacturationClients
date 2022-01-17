@@ -1,0 +1,36 @@
+﻿<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar" style="background-color:darkslategray">
+    <div class="profile-sidebar">
+        @*<div class="profile-userpic">
+                <img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">
+            </div>*@
+        <div class="profile-usertitle">
+            <div class="profile-usertitle-name"><strong><i style="color:aquamarine">@Session["username"]</i></strong></div>
+            <div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    @{
+        var pageName = ViewContext.RouteData.Values["controller"].ToString();
+    }
+    <ul class="nav menu">
+        <li class="nav-item  @(pageName == "Dashboard" ? "active" : "")"><a href="@Url.Action("Index","facturations")" style="color:white"><em class="fa fa-dashboard">&nbsp;</em> Dashboard</a></li>
+        <li class="nav-item  @(pageName == "clients" ? "active" : "")"><a href="@Url.Action("Index","clients")" style="color:white"><em class="fa fa-user-circle">&nbsp;</em>clients</a></li>
+        <li class="nav-item  @(pageName == "categories" ? "active" : "")"><a href="@Url.Action("Index","categories")" style="color:white"><em class="fa fa-jsfiddle">&nbsp;</em>Categories</a></li>
+        <li class="nav-item  @(pageName == "produits" ? "active" : "")"><a href="@Url.Action("Index","produits")" style="color:white"><em class="fa fa-jsfiddle">&nbsp;</em>Produits</a></li>
+
+        @*<li><a href="@Html.ActionLink("Acheter", "Initialiser", "tableachats")" style="color:white"><em class="fa fa-dashboard">&nbsp;</em></a></li>*@
+
+        <li class="nav-item  @(pageName == "fournisseurs" ? "active" : "")"><a href="@Url.Action("Index","fournisseurs")" style="color:white"><em class="fa fa-user-circle">&nbsp;</em>Fournisseurs</a></li>
+        <li class="nav-item  @(pageName == "users" ? "active" : "")"><a href="@Url.Action("Index","users")" style="color:white"><em class="fa fa-user">&nbsp;</em>Utilisateurs</a></li>
+        <li class="nav-item  @(pageName == "profils" ? "active" : "")"><a href="@Url.Action("Index","profils")" style="color:white"><em class="fa fa-toggle-off">&nbsp;</em>Profile</a></li>
+        <li class="nav-item  @(pageName == "historiquefacturations" ? "active" : "")"><a href="@Url.Action("Index","historiquefacturations")" style="color:white"><em class="fa fa-gg-circle">&nbsp;</em>Histo Factu</a></li>
+        <li class="nav-item  @(pageName == "historiqueprixes" ? "active" : "")"><a href="@Url.Action("Index","historiqueprixes")" style="color:white"><em class="fa fa-gg-circle">&nbsp;</em>Histo Prix</a></li>
+        <li><a href="@Url.Action("Index3","historiquefacturations")" style="color:white"><em class="fa fa-money">&nbsp;</em>Frais Journalière</a></li>
+
+        <li><a href="@Url.Action("Quantitev","historiquefacturations")" style="color:white"><em class="fa fa-industry">&nbsp;</em>Quantité Vendues/jrs</a></li>
+        <li><a href="@Url.Action("Login","users")" style="color:white"><em class="fa fa-power-off" style="color:white">&nbsp;</em> se déconnecter</a></li>
+    </ul>
+</div>
+
+
+@*<p class="btn btn-default" style="color:white">@Html.ActionLink("Acheter", "Initialiser", "tableachats")<p>*@

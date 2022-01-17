@@ -1,0 +1,60 @@
+﻿@model CRDLPROJET.Models.client
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Layouts/_Default.cshtml";
+}
+
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="col-lg-12" style="background-color:aquamarine">
+        <div class="panel panel-default" style="background-color:aquamarine">
+            @*<div class="panel-heading" style="background-color:aquamarine"></div>*@
+            <div class="panel-body" style="background-color:aquamarine">
+                <div class="col-md-6" style="background-color:aquamarine">
+                    <div>
+                        <h4 style="text-align:center">Client</h4>
+                        <hr />
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.nomclient)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.nomclient)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.prenomclient)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.prenomclient)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.numtel)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.numtel)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.adresse)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.adresse)
+                            </dd>
+
+                        </dl>
+                    </div>
+                    <p class="btn btn-warning">
+                        @Html.ActionLink("Edit", "Edit", new { id = Model.clientID }) |
+                        @Html.ActionLink("Back to List", "Index", null, new { style = "text-decoration:none;" })
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

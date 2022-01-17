@@ -1,0 +1,188 @@
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\CRDLPROJET.dll.config
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\CRDLPROJET.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\CRDLPROJET.pdb
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\csc.exe
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\csc.exe.config
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\csc.rsp
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\csi.exe
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\csi.exe.config
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\csi.rsp
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\System.AppContext.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Console.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\System.IO.Compression.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Net.Http.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Net.Sockets.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\System.ValueTuple.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Xml.XPath.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\vbc.exe
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\vbc.exe.config
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\vbc.rsp
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\VBCSCompiler.exe
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\Antlr3.Runtime.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\Newtonsoft.Json.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\System.Web.Helpers.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\System.Web.Mvc.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\System.Web.Optimization.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\System.Web.Razor.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\System.Web.WebPages.Deployment.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\System.Web.WebPages.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\System.Web.WebPages.Razor.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\WebGrease.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\System.Web.Helpers.xml
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\System.Web.Mvc.xml
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\System.Web.Optimization.xml
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\System.Web.Razor.xml
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\System.Web.WebPages.xml
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\System.Web.WebPages.Deployment.xml
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\System.Web.WebPages.Razor.xml
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\Newtonsoft.Json.xml
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\Antlr3.Runtime.pdb
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\fr\System.Web.Helpers.resources.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\fr\System.Web.Mvc.resources.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\fr\System.Web.Optimization.resources.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\fr\System.Web.Razor.resources.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\fr\System.Web.WebPages.resources.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\fr\System.Web.WebPages.Deployment.resources.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\fr\System.Web.WebPages.Razor.resources.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\obj\Debug\CRDLPROJET.csproj.AssemblyReference.cache
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\obj\Debug\CRDLPROJET.csproj.CoreCompileInputs.cache
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\obj\Debug\CRDLPROJET.csproj.CopyComplete
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\obj\Debug\CRDLPROJET.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\obj\Debug\CRDLPROJET.pdb
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\EntityFramework.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\EntityFramework.SqlServer.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\EntityFramework.xml
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\EntityFramework.SqlServer.xml
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\fr\EntityFramework.resources.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\Rotativa.Core.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\Rotativa.MVC.dll
+C:\Users\MFASHA Theos\source\repos\CRDLPROJET\CRDLPROJET\bin\fr\EntityFramework.SqlServer.resources.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\CRDLPROJET.dll.config
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\CRDLPROJET.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\CRDLPROJET.pdb
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\csc.exe
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\csc.exe.config
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\csc.rsp
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\csi.exe
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\csi.exe.config
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\csi.rsp
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\Microsoft.Managed.Core.targets
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\System.AppContext.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Collections.Immutable.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Console.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Globalization.Calendars.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\System.IO.Compression.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\System.IO.FileSystem.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Net.Http.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Net.Sockets.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Reflection.Metadata.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\System.ValueTuple.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Xml.XmlDocument.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Xml.XPath.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\vbc.exe
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\vbc.exe.config
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\vbc.rsp
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\VBCSCompiler.exe
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\roslyn\VBCSCompiler.exe.config
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\Antlr3.Runtime.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\EntityFramework.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\EntityFramework.SqlServer.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\Microsoft.Web.Infrastructure.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\Newtonsoft.Json.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\Rotativa.Core.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\Rotativa.MVC.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\System.Web.Helpers.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\System.Web.Mvc.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\System.Web.Optimization.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\System.Web.Razor.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\System.Web.WebPages.Deployment.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\System.Web.WebPages.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\System.Web.WebPages.Razor.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\WebGrease.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\EntityFramework.xml
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\EntityFramework.SqlServer.xml
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\System.Web.Helpers.xml
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\System.Web.Mvc.xml
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\System.Web.Optimization.xml
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\System.Web.Razor.xml
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\System.Web.WebPages.xml
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\System.Web.WebPages.Deployment.xml
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\System.Web.WebPages.Razor.xml
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\Newtonsoft.Json.xml
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\Antlr3.Runtime.pdb
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\fr\EntityFramework.resources.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\fr\EntityFramework.SqlServer.resources.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\fr\System.Web.Helpers.resources.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\fr\System.Web.Mvc.resources.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\fr\System.Web.Optimization.resources.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\fr\System.Web.Razor.resources.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\fr\System.Web.WebPages.resources.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\fr\System.Web.WebPages.Deployment.resources.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\bin\fr\System.Web.WebPages.Razor.resources.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\obj\Debug\CRDLPROJET.csproj.AssemblyReference.cache
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\obj\Debug\CRDLPROJET.csproj.CoreCompileInputs.cache
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\obj\Debug\CRDLPROJET.csproj.CopyComplete
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\obj\Debug\CRDLPROJET.dll
+D:\CRDL\formation\CRDLPROJET\CRDLPROJET\obj\Debug\CRDLPROJET.pdb

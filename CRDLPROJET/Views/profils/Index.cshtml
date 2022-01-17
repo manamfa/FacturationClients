@@ -1,0 +1,50 @@
+﻿@model IEnumerable<CRDLPROJET.Models.profil>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layouts/_Default.cshtml";
+}
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main" style="background-color:aquamarine">
+    <h2 style="text-align:center">Profils Des Utilisateurs</h2>
+    <p class="fa fa-plus btn btn btn-warning">
+        @Html.ActionLink("Ajouter Profil","Create", null, new { style = "text-decoration:none;" })
+    </p>
+    <table id="example" class="table table-striped table-bordered" cellspacing="0" width="98%" style="margin-left:1%">
+        <thead>
+            <tr>
+                <th>
+                    #No
+                </th>
+                <th>
+                    Nom Profil
+                </th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{ 
+                int no = 0;
+             }
+            @foreach (var item in Model)
+            {
+                no++;
+                <tr>
+                    <td>
+                        @no
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.profilename)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.profileID }, new { @class = "btn btn-sm btn-primary fa fa-pencil" }) |
+                        @*@Html.ActionLink("Details", "Details", new { id = item.profileID }, new { @class = "btn btn-sm btn-success fa fa-trach" }) |*@
+                        @Html.ActionLink("Delete", "Delete", new { id = item.profileID }, new { @class = "btn btn-sm btn-danger fa fa-trach" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    
+</div>

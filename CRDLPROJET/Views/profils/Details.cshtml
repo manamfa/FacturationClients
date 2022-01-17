@@ -1,0 +1,40 @@
+﻿@model CRDLPROJET.Models.profil
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Layouts/_Default.cshtml";
+}
+
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="col-lg-12" style="background-color:aquamarine">
+        <div class="panel panel-default" style="background-color:aquamarine">
+            @*<div class="panel-heading" style="background-color:aquamarine"></div>*@
+            <div class="panel-body" style="background-color:aquamarine">
+                <div class="col-md-6" style="background-color:aquamarine">
+                    <div>
+                        <h4 style="text-align:center">Profil</h4>
+                        <hr />
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.profilename)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.profilename)
+                            </dd>
+
+                        </dl>
+                    </div>
+                    <p class="btn btn-warning">
+                        @Html.ActionLink("Edit", "Edit", new { id = Model.profileID }) |
+                        @Html.ActionLink("Lister Nom Profil ", "Index")
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</div>

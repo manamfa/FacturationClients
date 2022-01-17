@@ -1,0 +1,63 @@
+﻿@model IEnumerable<CRDLPROJET.Models.facturation>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layouts/_Default.cshtml";
+}
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main" style="background-color:white">
+
+    @{
+        int val = 0;
+    }
+    @foreach (var item in Model)
+    {
+        val = item.facturationID;
+    }
+
+    @{
+        int m = val + 1;
+    }
+    <br /><br /><br />
+    <h3 style="text-align:center">Facture Numero:@m</h3>
+    <h4 class="pull-right">@DateTime.Now.ToString("dddd, dd MMMM yyyy")</h4>
+    <h4>Nom Boutique:ADONAI</h4><br />
+    <h4>AVENUE:MAZA</h4><br />
+    <h4>Nom Boutiquier:NIYONZIMA Pacifique</h4><br />
+    <h4>Tél +257 22226123/22226060</h4><br />
+    <br /><br />
+    <h4><strong>Nom & Prenom Client:<br /><br /></strong></h4>
+    <h4><strong>Numero Du Télephone:<br /><br /><br /><br /></strong></h4>
+
+    <table class="table">
+
+        <tr>
+            <th>#No &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</th>
+
+            <th> Produit &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</th>
+
+            <th>Quantite &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</th>
+
+            <th>Prix Unitaire &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</th>
+
+            <th>Total &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</th>
+
+        </tr>
+
+
+
+    </table>
+
+    <br /><br /><br /><hr />
+
+    Montant Total:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;
+    &emsp;&emsp;&emsp;&emsp;
+
+
+    0 &emsp;Fbu
+    <br /><br /><br /><br /><br /><br /><br /><br />
+</div>
