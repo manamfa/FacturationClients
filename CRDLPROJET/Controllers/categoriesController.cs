@@ -114,7 +114,6 @@ namespace CRDLPROJET.Controllers
             }
             return View(categorie);
         }
-
         // GET: categories/Delete/5
         public ActionResult Delete(int? id)
         {
