@@ -22,7 +22,6 @@ $(function () {
         });
     });
 });
-
 //Calcute the total
 $(function () {
     $('#Quantite').on('change', function () {
