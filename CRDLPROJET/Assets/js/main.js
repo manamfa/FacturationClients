@@ -11,7 +11,6 @@
         });
     });
 });
-
 //Getting unit price
 $(function () {
     $('#produitID').on('change', function () {
