@@ -6,7 +6,6 @@
 tr.dt-hasChild td.dt-control {
     background: url("https://www.datatables.net/examples/resources/details_close.png") no-repeat center center
 }
-
 table.dataTable th.dt-left, table.dataTable td.dt-left {
     text-align: left
 }
