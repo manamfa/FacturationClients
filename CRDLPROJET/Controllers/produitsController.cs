@@ -42,6 +42,7 @@ namespace CRDLPROJET.Controllers
             return View(produit);
         }
         // GET: produits/Details/5
+        
         public ActionResult Details1(int? id)
         {
             if (id == null)
