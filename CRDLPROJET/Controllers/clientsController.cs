@@ -293,7 +293,6 @@ namespace CRDLPROJET.Controllers
             }
             return View(client);
         }
-
         // POST: clients/Delete/5
         [HttpPost, ActionName("Delete1")]
         [ValidateAntiForgeryToken]
