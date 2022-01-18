@@ -22,6 +22,7 @@ namespace CRDLPROJET.Controllers
             return View(historiquefacturations.ToList());
 
         }
+
         [HttpPost]
         public ActionResult Index(DateTime? startDate, DateTime? endDate)
         {
