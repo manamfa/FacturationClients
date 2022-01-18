@@ -49,6 +49,7 @@ namespace CRDLPROJET.Controllers
             db.SaveChanges();
             return RedirectToAction("create3", "tableachats");
         }
+
         public ActionResult Initialis2()
         {
             var vps = db.tableachats.ToList();
