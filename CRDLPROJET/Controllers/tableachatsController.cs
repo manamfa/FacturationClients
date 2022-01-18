@@ -438,7 +438,6 @@ namespace CRDLPROJET.Controllers
             return View(tableachat);
         }
 
-
         public ActionResult Create3()
         {
             var client = db.clients;
