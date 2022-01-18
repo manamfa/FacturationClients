@@ -134,7 +134,6 @@ namespace CRDLPROJET.Controllers
                 on d.produitID equals p.produitID 
             join c in db.clients on d.clientID equals c.clientID
 
-
             select new { d.datehistofacturation, d.Quantite, d.produitID, p.nomproduit,c.nomclient,c.prenomclient,c.clientID} into x
             group x by new { x.datehistofacturation,x.nomproduit,x.produitID,x.clientID,x.nomclient,x.prenomclient} into g
             select new Histofactmodel
