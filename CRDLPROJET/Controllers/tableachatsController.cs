@@ -31,7 +31,6 @@ namespace CRDLPROJET.Controllers
         {
             var facturation = db.facturations;
             ViewData["facturation"] = facturation.ToList();
-
             var tableachats = db.tableachats.Include(t => t.client).Include(t => t.produit);
             return View(tableachats.ToList());
         }
