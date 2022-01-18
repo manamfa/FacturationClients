@@ -290,8 +290,7 @@ namespace CRDLPROJET.Controllers
             ViewData["tableachat"] = tableachat.ToList();
 
             var facturation = db.facturations;
-            ViewData["facturation"] = facturation.ToList();
-            
+            ViewData["facturation"] = facturation.ToList();   
             ViewBag.categorieID = new SelectList(db.categories, "categorieID", "nomcategorie");
             ViewBag.clientID = new SelectList(db.clients, "clientID", "nomclient");
             ViewBag.produitID = new SelectList(db.produits, "produitID", "nomproduit");
