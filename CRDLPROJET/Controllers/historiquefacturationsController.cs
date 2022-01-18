@@ -90,7 +90,6 @@ namespace CRDLPROJET.Controllers
                                               
                                           }).ToList();
             return View(model);
-
         }
         public ActionResult Index5()
         {
