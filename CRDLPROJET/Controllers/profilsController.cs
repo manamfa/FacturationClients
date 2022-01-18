@@ -40,7 +40,6 @@ namespace CRDLPROJET.Controllers
         {
             return View();
         }
-
         // POST: profils/Create
         // Pour vous protéger des attaques par survalidation, activez les propriétés spécifiques auxquelles vous souhaitez vous lier. Pour 
         // plus de détails, consultez https://go.microsoft.com/fwlink/?LinkId=317598.
