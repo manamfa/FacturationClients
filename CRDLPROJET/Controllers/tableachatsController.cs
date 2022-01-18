@@ -599,7 +599,6 @@ namespace CRDLPROJET.Controllers
 
 
 
-
         // GET: tableachats/Edit/5
         public ActionResult Edit(int? id)
         {
