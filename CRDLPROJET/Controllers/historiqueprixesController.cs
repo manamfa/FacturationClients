@@ -109,7 +109,6 @@ namespace CRDLPROJET.Controllers
             ViewBag.produitID = new SelectList(db.produits, "produitID", "nomproduit", historiqueprix.produitID);
             return View(historiqueprix);
         }
-
     
         // GET: historiqueprixes/Delete/5
         public ActionResult Delete(int? id)
