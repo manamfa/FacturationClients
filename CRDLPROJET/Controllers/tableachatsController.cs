@@ -514,7 +514,6 @@ namespace CRDLPROJET.Controllers
             ViewBag.produitID = new SelectList(db.produits, "produitID", "nomproduit", tableachat.produitID);
             return View(tableachat);
         }
-
         public ActionResult Create5()
         {
             var client = db.clients;
