@@ -11,8 +11,7 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h2>facturation</h2>
-       
+        <h2>facturation</h2>      
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.clientID, "clientID", htmlAttributes: new { @class = "control-label col-md-2" })
