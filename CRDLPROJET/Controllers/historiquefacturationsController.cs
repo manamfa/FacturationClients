@@ -283,6 +283,7 @@ namespace CRDLPROJET.Controllers
             ViewBag.produitID = new SelectList(db.produits, "produitID", "nomproduit", historiquefacturation.produitID);
             return View(historiquefacturation);
         }
+       
         // GET: historiquefacturations/Edit/5
         public ActionResult Edit(int? id)
         {
