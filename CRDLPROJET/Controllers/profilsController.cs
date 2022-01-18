@@ -59,7 +59,6 @@ namespace CRDLPROJET.Controllers
 
             return View(profil);
         }
-
         // GET: profils/Edit/5
         public ActionResult Edit(int? id)
         {
