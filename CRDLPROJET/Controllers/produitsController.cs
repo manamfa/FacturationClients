@@ -67,7 +67,6 @@ namespace CRDLPROJET.Controllers
             ViewBag.fournisseurID = new SelectList(db.fournisseurs, "fournisseurID", "nomfournisseur");
             return View();
         }
-
         // POST: produits/Create
         // Pour vous protéger des attaques par survalidation, activez les propriétés spécifiques auxquelles vous souhaitez vous lier. Pour 
         // plus de détails, consultez https://go.microsoft.com/fwlink/?LinkId=317598.
