@@ -30,7 +30,6 @@ namespace CRDLPROJET.Controllers
             var historiquefacturations = db.historiquefacturations.Where(x => x.datehistofacturation >= startDate && x.datehistofacturation <= endDate).ToList();
             return View(historiquefacturations);
         }
-
         public ActionResult Index2()
         {
             var historiquefacturations = db.historiquefacturations.Include(h => h.client).Include(h => h.client1).Include(h => h.client2).Include(h => h.client3).Include(h => h.facturation).Include(h => h.facturation1).Include(h => h.facturation2).Include(h => h.facturation3).Include(h => h.produit).Include(h => h.produit1).Include(h => h.produit2).Include(h => h.produit3);
