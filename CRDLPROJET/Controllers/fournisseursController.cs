@@ -19,8 +19,6 @@ namespace CRDLPROJET.Controllers
         {
             return View(db.fournisseurs.ToList());
         }
-
-
         // GET: fournisseurs/Details/5
         public ActionResult Details(int? id)
         {
