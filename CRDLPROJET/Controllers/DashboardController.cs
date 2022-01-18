@@ -7,7 +7,6 @@ using System.Web.Mvc;
 
 namespace CRDLPROJET.Controllers
 {
-
     public class DashboardController : Controller
     {
         // GET: Dashboard
