@@ -19,6 +19,7 @@ namespace CRDLPROJET.Controllers
         {
             return View(db.profils.ToList());
         }
+
         // GET: profils/Details/5
         public ActionResult Details(int? id)
         {
