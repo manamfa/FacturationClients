@@ -62,7 +62,6 @@ namespace CRDLPROJET.Controllers
 
             ViewBag.categorieID = new SelectList(db.categories, "categorieID", "nomcategorie");
             ViewBag.produitID = new SelectList(db.produits, "produitID", "nomproduit");
-
             return View();
         }
         public ActionResult Create1()
