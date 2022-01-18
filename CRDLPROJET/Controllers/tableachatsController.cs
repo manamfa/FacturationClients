@@ -81,7 +81,6 @@ namespace CRDLPROJET.Controllers
         {
             return new ActionAsPdf("Index", list);
         }
-        
         public JsonResult getUnitPrice(int product_id)
         {
             db.Configuration.ProxyCreationEnabled = false;
