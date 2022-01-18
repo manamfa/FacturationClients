@@ -296,6 +296,7 @@ namespace CRDLPROJET.Controllers
             {
                 return HttpNotFound();
             }
+
             ViewBag.clientID = new SelectList(db.clients, "clientID", "nomclient", historiquefacturation.clientID);
             ViewBag.clientID = new SelectList(db.clients, "clientID", "nomclient", historiquefacturation.clientID);
             ViewBag.clientID = new SelectList(db.clients, "clientID", "nomclient", historiquefacturation.clientID);
