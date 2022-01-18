@@ -93,7 +93,6 @@ namespace CRDLPROJET.Controllers
             ViewBag.produitID = new SelectList(db.produits, "produitID", "nomproduit", historiqueprix.produitID);
             return View(historiqueprix);
         }
-
         // POST: historiqueprixes/Edit/5
         // Pour vous protéger des attaques par survalidation, activez les propriétés spécifiques auxquelles vous souhaitez vous lier. Pour 
         // plus de détails, consultez https://go.microsoft.com/fwlink/?LinkId=317598.
