@@ -109,8 +109,7 @@ namespace CRDLPROJET.Controllers
             }).ToList();
          return View(model);
 
-        }
-         
+        }       
         public ActionResult Quantitev()
         {
             List<Histofactmodel> model = (from d in db.historiquefacturations join p in db.produits
