@@ -108,7 +108,6 @@ namespace CRDLPROJET.Controllers
             return View(user);
         }
 
-
         public ActionResult Logout()
         {
             Session.Clear();
