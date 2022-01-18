@@ -18,6 +18,5 @@ namespace CRDLPROJET.Controllers
         {
             return View();
         }
-
     }
 }
