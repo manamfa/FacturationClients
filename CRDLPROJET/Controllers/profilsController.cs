@@ -92,7 +92,6 @@ namespace CRDLPROJET.Controllers
             }
             return View(profil);
         }
-
         // GET: profils/Delete/5
         public ActionResult Delete(int? id)
         {
