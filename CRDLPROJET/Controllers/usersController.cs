@@ -201,7 +201,6 @@ namespace CRDLPROJET.Controllers
             ViewBag.profileID = new SelectList(db.profils, "profileID", "profilename", user.profileID);
             return View(user);
         }
-
         // POST: users/Edit/5
         // Pour vous protéger des attaques par survalidation, activez les propriétés spécifiques auxquelles vous souhaitez vous lier. Pour 
         // plus de détails, consultez https://go.microsoft.com/fwlink/?LinkId=317598.
