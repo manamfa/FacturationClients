@@ -36,6 +36,7 @@ namespace CRDLPROJET.Controllers
         }
         public JsonResult getProducts(int id)
         {
+
             db.Configuration.ProxyCreationEnabled = false;
             List<produit> Produit = db.produits.Where(x => x.categorieID == id).ToList();
             return Json(Produit, JsonRequestBehavior.AllowGet);
