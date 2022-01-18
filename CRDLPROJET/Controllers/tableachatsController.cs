@@ -361,7 +361,6 @@ namespace CRDLPROJET.Controllers
 
         public ActionResult Create1()
         {
-
             var histo = db.tableachats;
             ViewData["histo"] = histo.ToList();
 
