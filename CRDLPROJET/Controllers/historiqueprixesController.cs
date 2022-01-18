@@ -26,7 +26,6 @@ namespace CRDLPROJET.Controllers
             var historiqueprixes = db.historiqueprixes.Include(h => h.produit);
             return View(historiqueprixes.ToList());
         }
-
         // GET: historiqueprixes/Details/5
         public ActionResult Details(int? id)
         {
