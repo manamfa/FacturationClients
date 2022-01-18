@@ -1,4 +1,5 @@
-﻿@model CRDLPROJET.Models.tableachat
+﻿
+@model CRDLPROJET.Models.tableachat
 @*@model IEnumerable<CRDLPROJET.Models.Histofactmodel>*@
 
 
@@ -190,7 +191,7 @@
                 </td>
 
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "btn btn-sm btn-primary fa fa-pencil" }) |
+                    @*@Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "btn btn-sm btn-primary fa fa-pencil" }) |*@
                     @*@Html.ActionLink("Details", "Details", new { id = item.ID }) |*@
                     @Html.ActionLink("Delete", "DeleteAd", new { id = item.ID }, new { @class = "btn btn-sm btn-danger fa fa-trach" })
                 </td>
@@ -224,4 +225,6 @@
     </div>
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 </div>
+
+
 
