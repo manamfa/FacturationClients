@@ -76,6 +76,7 @@ namespace CRDLPROJET.Controllers
             db.SaveChanges();
             return RedirectToAction("create1", "clients");
         }
+
         public ActionResult PrintPage()
         {
             return new ActionAsPdf("Index", list);
