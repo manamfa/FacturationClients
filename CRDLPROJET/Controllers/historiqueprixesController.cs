@@ -110,6 +110,7 @@ namespace CRDLPROJET.Controllers
             return View(historiqueprix);
         }
 
+    
         // GET: historiqueprixes/Delete/5
         public ActionResult Delete(int? id)
         {
