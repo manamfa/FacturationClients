@@ -380,6 +380,7 @@ namespace CRDLPROJET.Controllers
             }
             return View(historiquefacturation);
         }
+
         public ActionResult Delete1(int? id)
         {
             if (id == null)
