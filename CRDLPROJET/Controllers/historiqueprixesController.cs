@@ -14,6 +14,7 @@ namespace CRDLPROJET.Controllers
     {
         private facturationclientBOUEntities4 db = new facturationclientBOUEntities4();
 
+
         // GET: historiqueprixes
         public ActionResult Index()
         {
