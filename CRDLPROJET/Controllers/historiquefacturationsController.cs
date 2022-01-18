@@ -61,7 +61,6 @@ namespace CRDLPROJET.Controllers
             return View(model);
 
         }
-
         public ActionResult Index3()
         {
             List<Histofactmodel> model = (from d in db.historiquefacturations
