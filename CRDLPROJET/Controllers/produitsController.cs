@@ -88,7 +88,6 @@ namespace CRDLPROJET.Controllers
             ViewBag.fournisseurID = new SelectList(db.fournisseurs, "fournisseurID", "nomfournisseur", produit.fournisseurID);
             return View(produit);
         }
-
         // GET: produits/Edit/5
         public ActionResult Edit(int? id)
         {
