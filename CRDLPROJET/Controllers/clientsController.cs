@@ -25,7 +25,6 @@ namespace CRDLPROJET.Controllers
         {
             return View(db.clients.ToList());
         }
-
         // GET: clients/Details/5
         public ActionResult Details(int? id)
         {
