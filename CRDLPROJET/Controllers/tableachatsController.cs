@@ -660,7 +660,6 @@ namespace CRDLPROJET.Controllers
             return View(tableachat);
         }
 
-
         public ActionResult Delete1(int? id)
         {
             if (id == null)
