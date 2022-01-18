@@ -45,6 +45,7 @@ namespace CRDLPROJET.Controllers
             return View(user);
         }
 
+
         public ActionResult Login()
         {
             return View();
