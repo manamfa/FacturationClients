@@ -21,7 +21,6 @@ namespace CRDLPROJET.Controllers
             var produits = db.produits.Include(p => p.categorie).Include(p => p.fournisseur);
             return View(produits.ToList());
         }
-
         public ActionResult Index1()
         {
             var produits = db.produits.Include(p => p.categorie).Include(p => p.fournisseur);
