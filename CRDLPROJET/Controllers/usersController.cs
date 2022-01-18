@@ -185,6 +185,7 @@ namespace CRDLPROJET.Controllers
             ViewBag.profileID = new SelectList(db.profils, "profileID", "profilename", user.profileID);
             return View(user);
         }
+
         // GET: users/Edit/5
         public ActionResult Edit1(int? id)
         {
