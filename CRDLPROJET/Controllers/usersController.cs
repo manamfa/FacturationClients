@@ -23,8 +23,6 @@ namespace CRDLPROJET.Controllers
             var users = db.users.Include(u => u.profil);
             return View(users.ToList());
         }
-
-       
         public ActionResult Index1()
         {
 
