@@ -16,6 +16,7 @@ namespace CRDLPROJET.Controllers
     {
         private facturationclientBOUEntities4 db = new facturationclientBOUEntities4();
 
+
         // GET: tableachats
         List<tableachat> list = null;
         public ActionResult Index()
