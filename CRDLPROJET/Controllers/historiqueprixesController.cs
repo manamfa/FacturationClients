@@ -55,6 +55,7 @@ namespace CRDLPROJET.Controllers
             return View(historiqueprix);
         }
         // GET: historiqueprixes/Create
+  
         public ActionResult Create()
         {
             ViewBag.produitID = new SelectList(db.produits, "produitID", "nomproduit");
