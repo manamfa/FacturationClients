@@ -201,7 +201,6 @@ namespace CRDLPROJET.Controllers
             }
             return View(historiquefacturation);
         }
-
         // GET: historiquefacturations/Create
         public ActionResult Create()
         {
