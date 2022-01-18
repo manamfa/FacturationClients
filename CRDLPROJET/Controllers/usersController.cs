@@ -30,7 +30,6 @@ namespace CRDLPROJET.Controllers
             return View(users.ToList());
 
         }
-
         // GET: users/Details/5
         public ActionResult Details(int? id)
         {
