@@ -18,11 +18,13 @@ namespace CRDLPROJET.Controllers
         // GET: produits
         public ActionResult Index()
         {
+            ViewBag.msg= TempData["msg"] as string;
             var produits = db.produits.Include(p => p.categorie).Include(p => p.fournisseur);
             return View(produits.ToList());
         }
         public ActionResult Index1()
         {
+            ViewBag.msg= TempData["msg"] as string;
             var produits = db.produits.Include(p => p.categorie).Include(p => p.fournisseur);
             return View(produits.ToList());
         }
@@ -79,7 +81,7 @@ namespace CRDLPROJET.Controllers
                 db.produits.Add(produit);
                 db.SaveChanges();
 
-                TempData["msg"] = "<script>alert('Opération Réussie avec success');</script>";
+                TempData["msg"] = "Insertion Reussie avec success";
 
                 return RedirectToAction("Index");
             }
@@ -117,7 +119,7 @@ namespace CRDLPROJET.Controllers
                 db.Entry(produit).State = EntityState.Modified;
                 db.SaveChanges();
 
-                TempData["msg"] = "<script>alert('Opération Réussie avec success');</script>";
+                TempData["msg"] = "Modification Reussie avec success";
 
                 return RedirectToAction("Index", "produits");
             }
@@ -149,7 +151,7 @@ namespace CRDLPROJET.Controllers
             db.produits.Remove(produit);
             db.SaveChanges();
 
-            TempData["msg"] = "<script>alert('Opération Réussie avec success');</script>";
+            TempData["msg"] = "La Suppression Reussie avec success";
 
             return RedirectToAction("Index");
         }
