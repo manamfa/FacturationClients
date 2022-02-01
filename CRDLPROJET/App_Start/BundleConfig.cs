@@ -53,9 +53,8 @@ namespace CRDLPROJET
 
                   ));
 
-
-
             bundles.Add(new ScriptBundle("~/Assets/js").Include(
+                "~/Assets/js/sweetalert.js",
                  "~/Assets/js/main.js",
                  "~/Assets/js/dataTables.bootstrap4.min.js",
                  "~/Assets/js/jquery.dataTables.min.js",
