@@ -5,6 +5,10 @@
     IEnumerable<CRDLPROJET.Models.facturation> facturations = ViewData["facturation"] as IEnumerable<CRDLPROJET.Models.facturation>;
 }
 
+@{
+
+    IEnumerable<CRDLPROJET.Models.tableachat> tableachats = ViewData["tableachat"] as IEnumerable<CRDLPROJET.Models.tableachat>;
+}
 
 @{
     int val = 0;
@@ -62,64 +66,59 @@
 <br />
 <h3>B.Identification Du Client</h3>
 <h3 class="pull-left"><strong>Nom & Prenom Client:@Html.DisplayFor(modelItem => name)&emsp;@Html.DisplayFor(modelItem => prename)</strong></h3>
-<h3 class="pull-left"><strong>Adresse:@adres</strong><br /><br /><br /><br /><br /><br /></h3>
-<table class="table table-bordered">
+<h3 class="pull-left"><strong>Adresse:@adres</strong><br /><br /><br /></h3>
+<table class="table table-bordered" style="border:1px solid #000">
 
     <tr>
-        <th>
+        <th style="border:1px solid #000">
             #No&emsp;&emsp;
         </th>
-        <th>
+        <th style="border:1px solid #000">
             Produit   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
         </th>
-        <th>
+        <th style="border:1px solid #000">
             Quantite   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
         </th>
-        <th>
+        <th style="border:1px solid #000">
             Prix Unitaire   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
         </th>
 
-        <th>Total   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</th>
+        <th style="border:1px solid #000">Total   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</th>
     </tr>
+
+
     @{
         int no = 0;
     }
+
     @foreach (var item in Model)
     {
         no++;
         <tr>
-            <td>
+            <td style="border:1px solid #000">
                 @no&emsp;&emsp;
             </td>
-            <td>
+            <td style="border:1px solid #000">
                 @Html.DisplayFor(modelItem => item.produit.nomproduit)&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
             </td>
-            <td>
+            <td style="border:1px solid #000">
                 @Html.DisplayFor(modelItem => item.Quantite)&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
             </td>
-            <td>
+            <td style="border:1px solid #000">
                 @Html.DisplayFor(modelItem => item.produit.prixdeventeunitaire)&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
             </td>
 
 
-            <td>
+            <td style="border:1px solid #000">
                 @Html.DisplayFor(modelItem => item.Total)&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
             </td>
 
-               @*<td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
-                </td>*@
         </tr>
     }
 
 </table>
 
 <br />
-<br />
-<br />
-<hr />
 <tfoot>
     <tr>
         <td>
@@ -134,4 +133,4 @@
 
     </tr>
 </tfoot>
-    @*<p class="pull-right">@Html.ActionLink("Retour", "Index", "tableachats")</p>*@
+@*<p class="pull-right">@Html.ActionLink("Retour", "Index", "tableachats")</p>*@
