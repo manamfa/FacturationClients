@@ -21,14 +21,21 @@ namespace CRDLPROJET.Controllers
         List<tableachat> list = null;
         public ActionResult Index()
         {
+            ViewBag.msg = TempData["msg"] as string;
             var facturation = db.facturations;
             ViewData["facturation"] = facturation.ToList();
+
+            var tableachat = db.tableachats;
+            ViewData["tableachat"] = tableachat.ToList();
 
             var tableachats = db.tableachats.Include(t => t.client).Include(t => t.produit);
             return View(tableachats.ToList());
         }
         public ActionResult Index1()
         {
+            ViewBag.msg = TempData["msg"] as string;
+            var tableachat = db.tableachats;
+            ViewData["tableachat"] = tableachat.ToList();
             var facturation = db.facturations;
             ViewData["facturation"] = facturation.ToList();
             var tableachats = db.tableachats.Include(t => t.client).Include(t => t.produit);
@@ -106,6 +113,7 @@ namespace CRDLPROJET.Controllers
 
         public ActionResult Create2()
         {
+            ViewBag.msg = TempData["msg"] as string;
             var client = db.clients;
             ViewData["client"] = client.ToList();
 
@@ -178,12 +186,12 @@ namespace CRDLPROJET.Controllers
                     db.historiquefacturations.Add(historiquefacturation);
                     db.SaveChanges();
 
-                    TempData["msg"] = "<script>alert('Opération Réussie avec success');</script>";
+                    TempData["msg"] = "Insertion Reussie avec success";
 
                 }
                 else
                 {
-                    TempData["msg"] = "<script>alert('La Quantite Demandée est Inférieur à Celle du Stock');</script>";
+                    TempData["msg"] = "La Quantite Demandee est Inferieur a Celle du Stock";
                 }
                 return RedirectToAction("create2", "tableachats");
             }
@@ -200,6 +208,7 @@ namespace CRDLPROJET.Controllers
         // GET: tableachats/Create
         public ActionResult CreateAd()
         {
+            ViewBag.msg = TempData["msg"] as string;
             var client = db.clients;
             ViewData["client"] = client.ToList();
 
@@ -261,12 +270,12 @@ namespace CRDLPROJET.Controllers
                         db.historiquefacturations.Add(historiquefacturation);
                         db.SaveChanges();
 
-                    TempData["msg"] = "<script>alert('Opération Réussie avec success');</script>";
+                    TempData["msg"] = "Insertion Reussie avec success";
 
                 }
                 else
                 {
-                    TempData["msg"] = "<script>alert('La Quantite Demandée est Inférieur à Celle du Stock');</script>";
+                    TempData["msg"] = "La Quantite Demandee est Inferieur a Celle du Stock";
                 }
 
 
@@ -283,6 +292,7 @@ namespace CRDLPROJET.Controllers
 
         public ActionResult Create4()
         {
+            ViewBag.msg = TempData["msg"] as string;
             var client = db.clients;
             ViewData["client"] = client.ToList();
 
@@ -341,13 +351,13 @@ namespace CRDLPROJET.Controllers
                     db.facturations.Add(facturation);
                     db.historiquefacturations.Add(historiquefacturation);
                     db.SaveChanges();
-                    TempData["msg"] = "<script>alert('Opération Réussie avec success');</script>";
+                    TempData["msg"] = "Insertion Reussie avec success";
 
 
                 }
                 else
                 {
-                    TempData["msg"] = "<script>alert('La Quantite Demandée est Inférieur à Celle du Stock');</script>";
+                    TempData["msg"] = "La Quantite Demandee est Inferieur a Celle du Stock";
                 }
 
 
@@ -361,6 +371,7 @@ namespace CRDLPROJET.Controllers
 
         public ActionResult Create1()
         {
+            ViewBag.msg = TempData["msg"] as string;
             var histo = db.tableachats;
             ViewData["histo"] = histo.ToList();
 
@@ -414,23 +425,22 @@ namespace CRDLPROJET.Controllers
                         produtData.Quantite = rest;
 
 
-
-
                         db.tableachats.Add(tableachat);
                         db.facturations.Add(facturation);
                         db.historiquefacturations.Add(historiquefacturation);
                         db.SaveChanges();
-                    TempData["msg"] = "<script>alert('Opération Réussie avec success');</script>";
-
+                    TempData["msg"] = "Insertion Reussie avec success";
+                    return RedirectToAction("create4", "tableachats");
 
                 }
                 else
                 {
-                    TempData["msg"] = "<script>alert('La Quantite Demandée est Inférieur à Celle du Stock');</script>";
+                    TempData["msg"] = "La Quantite Demandee est Inferieur a Celle du Stock";
+                    return RedirectToAction("create1", "tableachats");
                 }
 
 
-                return RedirectToAction("create4", "tableachats");
+                
             }
 
             ViewBag.clientID = new SelectList(db.clients, "clientID", "nomclient", tableachat.clientID);
@@ -440,6 +450,7 @@ namespace CRDLPROJET.Controllers
 
         public ActionResult Create3()
         {
+            ViewBag.msg = TempData["msg"] as string;
             var client = db.clients;
             ViewData["client"] = client.ToList();
 
@@ -496,18 +507,19 @@ namespace CRDLPROJET.Controllers
                     db.historiquefacturations.Add(historiquefacturation);
                     
                     db.SaveChanges();
-                    TempData["msg"] = "<script>alert('Opération Réussie avec success');</script>";
+                    TempData["msg"] = "Insertion Reussie avec success')";
 
-
+                    return RedirectToAction("create5", "tableachats");
 
                 }
                 else
                 {
-                    TempData["msg"] = "<script>alert('La Quantite Demandée est Inférieur à Celle du Stock');</script>";
+                    TempData["msg"] = "La Quantite Demandee est Inferieur a Celle du Stock";
+                    return RedirectToAction("create3", "tableachats");
                 }
 
 
-                return RedirectToAction("create5", "tableachats");
+                
             }
 
             ViewBag.clientID = new SelectList(db.clients, "clientID", "nomclient", tableachat.clientID);
@@ -516,6 +528,7 @@ namespace CRDLPROJET.Controllers
         }
         public ActionResult Create5()
         {
+            ViewBag.msg = TempData["msg"] as string;
             var client = db.clients;
             ViewData["client"] = client.ToList();
 
@@ -577,14 +590,12 @@ namespace CRDLPROJET.Controllers
                     db.historiquefacturations.Add(historiquefacturation);
                    
                     db.SaveChanges();
-                    TempData["msg"] = "<script>alert('Opération Réussie avec success');</script>";
-
-
+                    TempData["msg"] = "Insertion Reussie avec success";
 
                 }
                 else
                 {
-                    TempData["msg"] = "<script>alert('La Quantite Demandée est Inférieur à Celle du Stock');</script>";
+                    TempData["msg"] = "La Quantite Demandee est Inferieur a Celle du Stock";
                 }
 
 
@@ -629,7 +640,7 @@ namespace CRDLPROJET.Controllers
                 db.Entry(tableachat).State = EntityState.Modified;
                 db.SaveChanges();
 
-                TempData["msg"] = "<script>alert('Opération Réussie avec success');</script>";
+                TempData["msg"] = "La Modification Reussie avec success";
 
                 return RedirectToAction("Index");
             }
@@ -731,7 +742,7 @@ namespace CRDLPROJET.Controllers
             db.tableachats.Remove(tableachat);
             db.SaveChanges();
 
-            TempData["msg"] = "<script>alert('La Supression Réussie avec success');</script>";
+            TempData["msg"] = "La Supression Reussie avec success";
 
             return RedirectToAction("Index");
         }
@@ -782,7 +793,7 @@ namespace CRDLPROJET.Controllers
             db.tableachats.Remove(tableachat);
             db.SaveChanges();
                   
-            TempData["msg"] = "<script>alert('Opération Réussie avec success');</script>";
+            TempData["msg"] = "La Suppression Reussie avec success";
 
 
             return RedirectToAction("create4", "tableachats");
@@ -853,7 +864,7 @@ namespace CRDLPROJET.Controllers
             db.tableachats.Remove(tableachat);
             db.SaveChanges();
 
-            TempData["msg"] = "<script>alert('La Supression Réussie avec success');</script>";
+            TempData["msg"] = "La Supression Reussie avec success";
 
             return RedirectToAction("create4", "tableachats");
         }
@@ -907,7 +918,7 @@ namespace CRDLPROJET.Controllers
             db.tableachats.Remove(tableachat);
             db.SaveChanges();
 
-            TempData["msg"] = "<script>alert('La Supression Réussie avec success');</script>";
+            TempData["msg"] = "La Supression Reussie avec success";
 
             return RedirectToAction("create5", "tableachats");
         }

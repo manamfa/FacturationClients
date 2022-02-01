@@ -17,11 +17,13 @@ namespace CRDLPROJET.Controllers
         // GET: clients
         public ActionResult Index()
         {
+            ViewBag.msg = TempData["msg"] as string;
             return View(db.clients.ToList());
         }
 
         public ActionResult Index1()
         {
+            ViewBag.msg = TempData["msg"] as string;
             return View(db.clients.ToList());
         }
         // GET: clients/Details/5
@@ -119,14 +121,15 @@ namespace CRDLPROJET.Controllers
                     db.historiquefacturations.Add(historiquefacturation);
                     db.SaveChanges();
 
-                    TempData["msg"] = "<script>alert('Opération Réussie avec success');</script>";
-
+                    TempData["msg"] = "Insertion Reussie avec success";
+                    return RedirectToAction("create2", "tableachats");
                 }
                 else
                 {
-                    TempData["msg"] = "<script>alert('La Quantite Demandée est Inférieur à Celle du Stock');</script>";
+                    TempData["msg"] = "La Quantite Demande est Inferieur à Celle du Stock";
+                    return RedirectToAction("create1", "tableachats");
                 }
-                return RedirectToAction("create2", "tableachats");
+                
             }
 
             return View(client);
@@ -172,14 +175,15 @@ namespace CRDLPROJET.Controllers
                     db.historiquefacturations.Add(historiquefacturation);
                     db.SaveChanges();
 
-                    TempData["msg"] = "<script>alert('Opération Réussie avec success');</script>";
-
+                    TempData["msg"] = "Insertion Reussie avec success";
+                    return RedirectToAction("createAd", "tableachats");
                 }
                 else
                 {
-                    TempData["msg"] = "<script>alert('La Quantite Demandée est Inférieur à Celle du Stock');</script>";
+                    TempData["msg"] = "La Quantite Demande est Inferieur à Celle du Stock";
+                    return RedirectToAction("create", "tableachats");
                 }
-                return RedirectToAction("createAd", "tableachats");
+                
             }
 
 
@@ -275,7 +279,7 @@ namespace CRDLPROJET.Controllers
             db.clients.Remove(client);
             db.SaveChanges();
 
-            TempData["msg"] = "<script>alert('La Supression Réussie avec success');</script>";
+            TempData["msg"] = "La Supression Reussie avec success";
 
             return RedirectToAction("Index");
         }
@@ -302,7 +306,7 @@ namespace CRDLPROJET.Controllers
             db.clients.Remove(client);
             db.SaveChanges();
 
-            TempData["msg"] = "<script>alert('La Supression Réussie avec success');</script>";
+            TempData["msg"] = "La Supression Reussie avec success";
             return RedirectToAction("Index");
         }
         protected override void Dispose(bool disposing)

@@ -4,7 +4,7 @@
     ViewBag.Title = "Create";
     Layout = "~/Views/Layout/_Default.cshtml";
 }
-@Html.Raw(TempData["msg"])
+@*@Html.Raw(TempData["msg"])*@
 @{
 
     IEnumerable<CRDLPROJET.Models.tableachat> tableachats = ViewData["tableachat"] as IEnumerable<CRDLPROJET.Models.tableachat>;
@@ -195,8 +195,8 @@
     <h4 class="pull-left"><strong>
     Montant Total &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
     &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;             
-    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
     @*&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
         &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;*@
     <input type="text" value="@somme &emsp;Fbu" />

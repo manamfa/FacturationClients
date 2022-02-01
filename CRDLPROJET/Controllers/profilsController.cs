@@ -17,6 +17,7 @@ namespace CRDLPROJET.Controllers
         // GET: profils
         public ActionResult Index()
         {
+            ViewBag.msg = TempData["msg"] as string;
             return View(db.profils.ToList());
         }
 
@@ -52,7 +53,7 @@ namespace CRDLPROJET.Controllers
                 db.profils.Add(profil);
                 db.SaveChanges();
 
-                TempData["msg"] = "<script>alert('Opération Réussie avec success');</script>";
+                TempData["msg"] = "Insertion Reussie avec success";
 
                 return RedirectToAction("Index");
             }
@@ -86,7 +87,7 @@ namespace CRDLPROJET.Controllers
                 db.Entry(profil).State = EntityState.Modified;
                 db.SaveChanges();
 
-                TempData["msg"] = "<script>alert('Opération Réussie avec success');</script>";
+                TempData["msg"] = "La Modification Reussie avec success";
 
                 return RedirectToAction("Index");
             }
@@ -116,7 +117,7 @@ namespace CRDLPROJET.Controllers
             db.profils.Remove(profil);
             db.SaveChanges();
 
-            TempData["msg"] = "<script>alert('La Supression Réussie avec success');</script>";
+            TempData["msg"] = "La Supression Reussie avec success";
 
             return RedirectToAction("Index");
         }
