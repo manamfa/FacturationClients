@@ -16,11 +16,13 @@ namespace CRDLPROJET.Controllers
         // GET: categories
         public ActionResult Index()
         {
-
+            ViewBag.msg = TempData["msg"] as string;
+            
             return View(db.categories.ToList());
         }
         public ActionResult Index1()
-        {   
+        {
+            ViewBag.msg = TempData["msg"] as string;
             return View(db.categories.ToList());
         }
         // GET: categories/Details/5
@@ -70,9 +72,7 @@ namespace CRDLPROJET.Controllers
             {
                 db.categories.Add(categorie);
                 db.SaveChanges();
-
-                TempData["msg"] = "<script>alert('Opération Réussie avec success');</script>";
-
+                TempData["msg"] = "Insertion Reussi avec succes";
                 return RedirectToAction("Index");
             }
 
@@ -107,9 +107,7 @@ namespace CRDLPROJET.Controllers
             {
                 db.Entry(categorie).State = EntityState.Modified;
                 db.SaveChanges();
-
-                TempData["msg"] = "<script>alert('Opération Réussie avec success');</script>";
-
+                TempData["msg"] = "Modification Reussi avec succes";
                 return RedirectToAction("Index");
             }
             return View(categorie);
@@ -139,9 +137,7 @@ namespace CRDLPROJET.Controllers
             categorie categorie = db.categories.Find(id);
             db.categories.Remove(categorie);
             db.SaveChanges();
-
-            TempData["msg"] = "<script>alert('La Supression Réussie avec success');</script>";
-
+            TempData["msg"] = "Suppression Reussi avec succes";
             return RedirectToAction("Index");
         }
         protected override void Dispose(bool disposing)
