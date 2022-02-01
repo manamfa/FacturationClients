@@ -14,18 +14,17 @@ namespace CRDLPROJET.Controllers
     {
         private facturationclientBOUEntities4 db = new facturationclientBOUEntities4();
 
-
         // GET: users
         public ActionResult Index()
         {
 
-           
+            ViewBag.msg = TempData["msg"] as string;
             var users = db.users.Include(u => u.profil);
             return View(users.ToList());
         }
         public ActionResult Index1()
         {
-
+            ViewBag.msg = TempData["msg"] as string;
             var users = db.users.Include(u => u.profil);
             return View(users.ToList());
 
@@ -48,6 +47,7 @@ namespace CRDLPROJET.Controllers
 
         public ActionResult Login()
         {
+            ViewBag.msg = TempData["msg"] as string;
             return View();
         }
 
@@ -55,6 +55,7 @@ namespace CRDLPROJET.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Login(user user)
         {
+            
             var v = from p in db.profils
                     join u in db.users
                         on p.profileID equals u.userID
@@ -84,22 +85,18 @@ namespace CRDLPROJET.Controllers
 
                 if (result.profilename == "utilisateur")
                 {
-
-                    TempData["msg"] = "<script>alert('Login successfully');</script>";
-
+                    TempData["msg"] = "Well Come!!!"+user.username;
                     return RedirectToAction("Index1", "produits");
                 }
                 else if (result.profilename == "admin")
                 {
-
-                    TempData["msg"] = "<script>alert('Login successfully');</script>";
-
+                    TempData["msg"] = "Well Come!!!"+user.username;
                     return RedirectToAction("Index", "produits");
                 }
                 else
                 {
 
-                    TempData["msg"] = "<script>alert('Login Failled');</script>";
+                    TempData["msg"] = "Login Failled";
 
                     return RedirectToAction("Login", "users");
                 }
@@ -141,7 +138,7 @@ namespace CRDLPROJET.Controllers
                 db.users.Add(user);
                 db.SaveChanges();
 
-                TempData["msg"] = "<script>alert('Opération Réussie avec success');</script>";
+                TempData["msg"] = "Insertion Reussie avec success";
 
                 return RedirectToAction("Index");
             }
@@ -178,7 +175,7 @@ namespace CRDLPROJET.Controllers
                 db.Entry(user).State = EntityState.Modified;
                 db.SaveChanges();
 
-                TempData["msg"] = "<script>alert('Opération Réussie avec success');</script>";
+                TempData["msg"] = "La Modification Reussie avec success";
 
                 return RedirectToAction("Index");
             }
@@ -245,7 +242,7 @@ namespace CRDLPROJET.Controllers
             db.users.Remove(user);
             db.SaveChanges();
 
-            TempData["msg"] = "<script>alert('Opération Réussie avec success');</script>";
+            TempData["msg"] = "La Suppression Reussie avec success";
 
             return RedirectToAction("Index");
         }
