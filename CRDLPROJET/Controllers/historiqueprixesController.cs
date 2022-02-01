@@ -18,11 +18,13 @@ namespace CRDLPROJET.Controllers
         // GET: historiqueprixes
         public ActionResult Index()
         {
+            ViewBag.msg = TempData["msg"] as string;
             var historiqueprixes = db.historiqueprixes.Include(h => h.produit);
             return View(historiqueprixes.ToList());
         }
         public ActionResult Index1()
         {
+            ViewBag.msg = TempData["msg"] as string;
             var historiqueprixes = db.historiqueprixes.Include(h => h.produit);
             return View(historiqueprixes.ToList());
         }
@@ -72,6 +74,7 @@ namespace CRDLPROJET.Controllers
             {
                 db.historiqueprixes.Add(historiqueprix);
                 db.SaveChanges();
+                TempData["msg"] = "Insertion Reussie avec success";
                 return RedirectToAction("Index");
             }
 
@@ -104,6 +107,7 @@ namespace CRDLPROJET.Controllers
             {
                 db.Entry(historiqueprix).State = EntityState.Modified;
                 db.SaveChanges();
+                TempData["msg"] = "Modification Reussie avec success";
                 return RedirectToAction("Index");
             }
             ViewBag.produitID = new SelectList(db.produits, "produitID", "nomproduit", historiqueprix.produitID);
@@ -133,6 +137,7 @@ namespace CRDLPROJET.Controllers
             historiqueprix historiqueprix = db.historiqueprixes.Find(id);
             db.historiqueprixes.Remove(historiqueprix);
             db.SaveChanges();
+            TempData["msg"] = "La Suppression Reussie avec success";
             return RedirectToAction("Index");
         }
         protected override void Dispose(bool disposing)
