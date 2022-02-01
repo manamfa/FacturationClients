@@ -17,6 +17,7 @@ namespace CRDLPROJET.Controllers
         // GET: fournisseurs
         public ActionResult Index()
         {
+            ViewBag.msg = TempData["msg"] as string;
             return View(db.fournisseurs.ToList());
         }
         // GET: fournisseurs/Details/5
@@ -51,7 +52,7 @@ namespace CRDLPROJET.Controllers
                 db.fournisseurs.Add(fournisseur);
                 db.SaveChanges();
 
-                TempData["msg"] = "<script>alert('Opération Réussie avec success');</script>";
+                TempData["msg"] = "Insertion Reussie avec success";
 
                 return RedirectToAction("Index");
             }
@@ -85,7 +86,7 @@ namespace CRDLPROJET.Controllers
                 db.Entry(fournisseur).State = EntityState.Modified;
                 db.SaveChanges();
 
-                TempData["msg"] = "<script>alert('Opération Réussie avec success');</script>";
+                TempData["msg"] = "La Modification Reussie avec success";
 
                 return RedirectToAction("Index");
             }
@@ -114,7 +115,7 @@ namespace CRDLPROJET.Controllers
             db.fournisseurs.Remove(fournisseur);
             db.SaveChanges();
 
-            TempData["msg"] = "<script>alert('Opération Réussie avec success');</script>";
+            TempData["msg"] = "La Suppression Reussie avec success";
             return RedirectToAction("Index");
         }
         protected override void Dispose(bool disposing)
