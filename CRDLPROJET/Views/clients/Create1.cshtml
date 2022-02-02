@@ -4,6 +4,12 @@
     ViewBag.Title = "Create";
     Layout = "~/Views/Layout/_Default.cshtml";
 }
+
+@{
+
+    IEnumerable<CRDLPROJET.Models.tableachat> tableachats = ViewData["tableachat"] as IEnumerable<CRDLPROJET.Models.tableachat>;
+}
+
 @*@Html.Raw(TempData["msg"])*@
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main" style="background-color:aquamarine">
     <h2 style="text-align:center"><i>Identification Du Client</i></h2>
@@ -101,7 +107,7 @@
 
                 <label><b style="font-size:20px">Prix Unitaire</b></label>
 
-                <input type="text"  name="prixunitaire" readonly="" class="form-control prixunitaire" />
+                <input type="text" name="prixunitaire" readonly="" class="form-control prixunitaire" />
 
             </div>
 
@@ -146,11 +152,96 @@
         &emsp;&emsp;&emsp;&emsp;&emsp;
         &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
         <p class="btn btn-warning" style="color:white">
-            @Html.ActionLink("Retour", "Index1",null,new { style = "text-decoration:none;" })
+            @Html.ActionLink("Retour", "Index1", null, new { style = "text-decoration:none;" })
         </p>
     </div>
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <table class="table table-bordered">
+
+        <tr>
+            <th>
+                #No
+            </th>
+            <th>
+                Produit
+            </th>
+            <th>
+                Quantite
+            </th>
+            <th>
+                Prix Unitaire
+            </th>
+
+            <th>Total</th>
+            <th>Action</th>
+        </tr>
+        @{
+            int no = 0;
+        }
+        @foreach (CRDLPROJET.Models.tableachat item in tableachats)
+        {
+            no++;
+            <tr>
+                <td>
+                    @no
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.produit.nomproduit)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantite)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.produit.prixdeventeunitaire)
+                </td>
+
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Total)
+                </td>
+
+                <td>
+                    @*@Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "btn btn-sm btn-primary fa fa-pencil" }) |*@
+                    @*@Html.ActionLink("Details", "Details", new { id = item.ID }) |*@
+                    @Html.ActionLink("Delete", "Delete1", new { id = item.ID }, new { @class = "btn btn-sm btn-danger fa fa-trach" })
+                </td>
+            </tr>
+
+        }
+    </table>
+    @{ int somme = 0;}
+
+    @foreach (CRDLPROJET.Models.tableachat item in tableachats)
+    {
+
+        somme = somme + @item.Total.Value;
+    }
+    <h4 class="pull-left">
+        <strong>
+            Montant Total &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            @*&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;*@
+            <input type="text" value="@somme &emsp;Fbu" />
+
+        </strong>
+    </h4>
+
+
+
+    <div class="col-md-3">
+        <h1 class="btn btn-success">
+            @Html.ActionLink("Imprimer", "PrintPage",@*"tableachats",*@null, new { style = "text-decoration:none;" })
+        </h1>
+    </div>
+    <br /><br /><br /><br /><br /><br /><br />
 </div>
+
+@*</div>
+            </div>
+        </div>
+    </div>*@
+
 
 
