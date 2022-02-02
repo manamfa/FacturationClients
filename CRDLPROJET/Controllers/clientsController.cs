@@ -59,6 +59,9 @@ namespace CRDLPROJET.Controllers
             var client = db.clients;
             ViewData["client"] = client.ToList();
 
+            var tableachat = db.tableachats;
+            ViewData["tableachat"] = tableachat.ToList();
+
             var facturation = db.facturations;
             ViewData["facturation"] = facturation.ToList();
 
@@ -70,6 +73,9 @@ namespace CRDLPROJET.Controllers
         {
             var client = db.clients;
             ViewData["client"] = client.ToList();
+
+            var tableachat = db.tableachats;
+            ViewData["tableachat"] = tableachat.ToList();
 
             var facturation = db.facturations;
             ViewData["facturation"] = facturation.ToList();
