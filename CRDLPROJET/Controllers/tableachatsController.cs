@@ -375,6 +375,9 @@ namespace CRDLPROJET.Controllers
             var histo = db.tableachats;
             ViewData["histo"] = histo.ToList();
 
+            var tableachat = db.tableachats;
+            ViewData["tableachat"] = tableachat.ToList();
+
             var client = db.clients;
             ViewData["client"] = client.ToList();
 
@@ -453,6 +456,9 @@ namespace CRDLPROJET.Controllers
             ViewBag.msg = TempData["msg"] as string;
             var client = db.clients;
             ViewData["client"] = client.ToList();
+
+            var tableachat = db.tableachats;
+            ViewData["tableachat"] = tableachat.ToList();
 
             var facturation = db.facturations;
             ViewData["facturation"] = facturation.ToList();
